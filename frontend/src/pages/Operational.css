@@ -1,0 +1,39 @@
+.lf-operational-tracking { padding: 18px; overflow-y: auto; }
+.lf-operational-tracking header { display: flex; gap: 12px; align-items: center; color: var(--accent, #00c9fe); }
+.lf-operational-tracking h3 { margin: 0; font-size: 15px; color: var(--text, #eef8ff); }
+.lf-operational-tracking p { font-size: 11px; line-height: 1.6; color: var(--text-muted, #a5bbd5); }
+.lf-order-summary { margin: 18px 0; padding: 16px; border: 1px solid var(--border, #23415d); border-radius: 9px; }
+.lf-order-summary > span { float: right; color: var(--accent, #00c9fe); font-size: 11px; }
+.lf-operational-tracking dl { display: grid; gap: 10px; font-size: 12px; }
+.lf-operational-tracking dt { color: var(--text-muted, #a5bbd5); font-size: 10px; }
+.lf-operational-tracking dd { margin: 4px 0 0; overflow-wrap: anywhere; }
+.lf-operation-note { border-left: 2px solid var(--accent, #00c9fe); padding-left: 10px; }
+.lf-order-events { list-style: none; border-left: 1px solid #23415d; padding: 0 0 0 18px; margin-bottom: 24px; }
+.lf-order-events li { position: relative; padding-bottom: 18px; font-size: 11px; line-height: 1.5; }
+.lf-order-events li::before { content: ''; position: absolute; left: -23px; top: 4px; width: 8px; height: 8px; border-radius: 50%; background: #00c9fe; }
+.lf-order-events time { display: block; color: var(--text-muted, #a5bbd5); margin-top: 5px; font-size: 10px; }
+.lf-closed-orders { margin-top: 16px; padding: 16px; border: 1px solid var(--border, #23415d); border-radius: 10px; background: #081c2e; flex-shrink: 0; }
+.lf-closed-orders h3 { font-size: 14px; margin: 0 0 12px; }
+.lf-closed-orders { max-height: 180px; overflow-y: auto; }
+.lf-closed-orders summary { font-size: 12px; cursor: pointer; }
+.lf-closed-orders[open] summary { margin-bottom: 12px; }
+.lf-closed-orders > div { display: flex; gap: 8px; flex-wrap: wrap; }
+.lf-closed-orders button { border: 1px solid #23415d; border-radius: 7px; color: var(--text, #eef8ff); padding: 8px 12px; background: #0b253b; cursor: pointer; font-size: 11px; }
+.lf-stock-breakdown { display: block; margin-top: 4px; color: var(--text-muted, #a5bbd5); font-size: 10px; font-weight: 400; }
+.pedido-modal-actions { flex-wrap: wrap; }
+.pedido-modal-button.danger { border: 1px solid #f15b7c66; background: #f15b7c18; color: #ff86a0; }
+html[data-theme="blue"] .content.pedidos10-page { overflow-y: auto !important; }
+.lf-stock-policy { font-size: 11px; line-height: 1.5; padding: 10px 12px; border: 1px solid #00c9fe44; border-radius: 8px; color: #a8c5df; background: #00c9fe09; }
+.lf-order-period-filter { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 12px; border-bottom: 1px solid #22445e; background: #092033; flex-shrink: 0; }
+.lf-order-period-filter > strong { font-size: 10px; color: #aec6d9; }
+.lf-order-period-filter label { display: flex; align-items: center; gap: 6px; color: #adc4d7; font-size: 10px; }
+.lf-order-period-filter input { color-scheme: dark; font-family: inherit; font-size: 10px; background: #102b40; color: #d8e9f5; padding: 7px; border: 1px solid #2c4c65; border-radius: 6px; min-width: 115px; }
+.lf-order-period-shortcuts { display: flex; gap: 5px; flex-wrap: wrap; }
+.lf-order-period-shortcuts button { background: #102b40; border: 1px solid #2c4c65; border-radius: 5px; padding: 7px; color: #aacde4; font-size: 10px; cursor: pointer; }
+.lf-order-period-shortcuts button:hover { border-color: #00c9ee; color: #25d9fa; }
+.lf-order-period-filter > p { width: 100%; margin: 0; font-size: 10px; color: #8dabbe; line-height: 1.4; }
+.lf-order-period-filter > .lf-order-period-error { color: #ff869b; }
+html[data-theme="blue"] .pedidos10-pipeline-header { height: auto !important; min-height: 68px !important; flex-basis: auto !important; flex-wrap: wrap; gap: 12px; }
+html[data-theme="blue"] .pedidos10-pipeline-header .pedidos10-panel-title { flex: 1 1 260px; min-width: 0; }
+html[data-theme="blue"] .pedidos10-pipeline-tools { flex: 1 1 360px; min-width: 0; }
+html[data-theme="blue"] .pedidos10-pipeline-tools .pedidos10-search { flex: 1; min-width: 140px; width: auto !important; }

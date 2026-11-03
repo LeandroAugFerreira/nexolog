@@ -1,0 +1,39 @@
+.lf-connected-tracking { display: block !important; padding: 14px; overflow-y: auto !important; color: #e8f1ff; }
+.lf-connected-tracking > header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.lf-connected-tracking > header > svg { color: #00cefa; width: 26px; height: 26px; flex-shrink: 0; }
+.lf-connected-tracking h3 { font-size: 13px; line-height: 1.5; margin: 0; }
+.lf-connected-tracking header p { font-size: 10px; color: #a9c2dc; margin: 3px 0 0; }
+.lf-connected-order { border: 1px solid #23506e; border-radius: 8px; padding: 13px; background: #0b2139; }
+.lf-connected-order > div { display: flex; align-items: center; justify-content: space-between; gap: 5px; font-size: 14px; }
+.lf-connected-order span { color: #40c7ff; background: #006ad329; border: 1px solid #258cec; padding: 4px 8px; border-radius: 12px; font-size: 10px; }
+.lf-connected-order p { font-size: 11px; margin: 7px 0; color: #b8d0e8; }
+.lf-connected-order small { font-size: 10px; color: #a7c5df; }
+.lf-connected-map { position: relative; border: 1px solid #23506e; border-radius: 9px; overflow: hidden; margin-top: 8px; background: #061b2d; }
+.lf-connected-map > svg { display: block; width: 100%; height: auto; }
+.lf-connected-map > small { display: block; padding: 7px; color: #79abc6; font-size: 8px; letter-spacing: .8px; }
+.lf-connected-zoom { position: absolute; right: 8px; bottom: 28px; display: grid; }
+.lf-connected-zoom button { color: #c4e4fa; background: #062137; border: 1px solid #294c66; width: 29px; height: 28px; font-size: 20px; cursor: pointer; }
+.lf-connected-zoom button:disabled { color: #416b83; cursor: default; }
+.lf-connected-info { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin: 14px 0 18px; }
+.lf-connected-info > div { position: relative; padding: 0 8px 0 26px; border-right: 1px solid #14374f; }
+.lf-connected-info > div:last-child { border-right: 0; }
+.lf-connected-info svg { position: absolute; left: 0; top: 2px; width: 19px; height: 19px; color: #2c9fff; }
+.lf-connected-info small { display: block; font-size: 8px; color: #9bb9d1; }
+.lf-connected-info strong { display: block; font-size: 10px; line-height: 1.4; margin-top: 4px; overflow-wrap: anywhere; }
+.lf-connected-history-heading { display: flex; gap: 6px; align-items: center; justify-content: space-between; }
+.lf-connected-history-heading h4 { font-size: 12px; margin: 0; }
+.lf-connected-history-heading span { font-size: 8px; color: #a5bfd7; }
+.lf-connected-history-heading i { display: inline-block; width: 6px; height: 6px; background: #00e2a4; border-radius: 50%; box-shadow: 0 0 8px #00e2a4; }
+.lf-connected-events { list-style: none; padding: 0; margin: 12px 0; }
+.lf-connected-events li { position: relative; display: grid; grid-template-columns: 28px 1fr auto; gap: 8px; padding: 0 0 13px; font-size: 10px; }
+.lf-connected-events li::before { content: ''; position: absolute; left: 13px; top: 25px; bottom: 0; width: 1px; background: #1c6d9c; }
+.lf-connected-events li:last-child::before { display: none; }
+.lf-connected-event-icon { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: #026a9f; border: 1px solid #12c9ff; color: #cef5ff; box-shadow: 0 0 9px #00b7ff2b; }
+.lf-connected-event-icon svg { width: 16px; height: 16px; }
+.lf-connected-events strong { font-size: 11px; color: #73dbff; }
+.lf-connected-events p { margin: 4px 0 0; color: #9cbad2; font-size: 9px; line-height: 1.5; }
+.lf-connected-events time { color: #acc6dd; font-size: 8px; white-space: nowrap; margin-top: 4px; }
+.lf-connected-note { color: #8eb0c7; font-size: 9px; line-height: 1.5; padding-left: 8px; border-left: 2px solid #00caff; }
+.lf-connected-error { color: #ff849d; font-size: 10px; line-height: 1.5; }
+.lf-connected-details { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; margin-top: 12px; background: #102c48; border: 1px solid #2c5775; color: #dceeff; border-radius: 7px; font-size: 10px; cursor: pointer; }
+.lf-connected-details svg { width: 15px; height: 15px; }

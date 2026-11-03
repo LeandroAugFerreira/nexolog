@@ -1,0 +1,184 @@
+/* Continuidade das referências: estilos restritos às três telas. */
+html[data-theme="blue"] .content.reference-page { overflow-y: auto !important; overflow-x: hidden !important; height: calc(100vh - 65px) !important; }
+html[data-theme="blue"] .reference-page :is(.cliente-kpi, .usuario-kpi) { min-height: 112px !important; padding: 18px !important; }
+html[data-theme="blue"] .reference-page :is(.cliente-kpi, .usuario-kpi) strong { font-size: 30px !important; }
+html[data-theme="blue"] .reference-page :is(.cliente-kpi, .usuario-kpi) span { font-size: 12px !important; }
+html[data-theme="blue"] .reference-page :is(.clientes-table-card, .usuarios-table-card) { min-height: 540px !important; }
+html[data-theme="blue"] .reference-page :is(.clientes-table, .usuarios-table) td { font-size: 11px !important; }
+html[data-theme="blue"] .reference-page .clientes-table .lf-code { color: var(--accent) !important; }
+.lf-log-dialog { width: min(780px, calc(100vw - 40px)); max-height: 80vh; color: var(--text); }
+.lf-log-dialog::backdrop { background: #000c1cd9; }
+.lf-log-dialog table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 16px; }
+.lf-log-dialog :is(td, th) { padding: 12px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+.clientes-page.reference-page, .usuarios-page.reference-page {
+  gap: 16px; overflow-y: auto; padding: 20px 28px 24px;
+}
+.reference-page :is(.clientes-page-header, .usuarios-page-header) { gap: 18px; flex-wrap: wrap; }
+.reference-page :is(.clientes-page-header, .usuarios-page-header) h2 { font-size: 29px; letter-spacing: -.6px; }
+.reference-page :is(.clientes-page-header, .usuarios-page-header) p { font-size: 12px; line-height: 1.5; }
+.reference-page :is(.clientes-button, .usuarios-button) { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 41px; font-size: 12px; }
+.reference-page :is(.clientes-kpis, .usuarios-kpis) { gap: 14px; }
+.reference-page :is(.cliente-kpi, .usuario-kpi) { min-height: 112px; padding: 18px; gap: 16px; position: relative; overflow: hidden; box-shadow: 0 12px 28px #000b1c33; }
+.reference-page :is(.cliente-kpi-icon, .usuario-kpi-icon) { width: 48px; height: 48px; border-radius: 11px; }
+.reference-page .usuario-kpi-icon.admins, .reference-page .usuario-perfil-badge.administrador { color: var(--warning); background: rgba(var(--warning-rgb), .12); border-color: rgba(var(--warning-rgb), .35); }
+.reference-page .usuario-kpi-icon.gestores, .reference-page .usuario-perfil-badge.operador { color: var(--secondary-soft-text); background: rgba(var(--secondary-rgb), .16); border-color: rgba(var(--secondary-rgb), .45); }
+.reference-page .usuario-avatar { border-radius: 50%; color: #e7f9ff; background: linear-gradient(140deg, #37a9e4, #2961c7); }
+html[data-theme="blue"] .reference-page .usuario-perfil-badge { font-size: 10px !important; }
+.reference-page :is(.cliente-kpi, .usuario-kpi) span { font-size: 12px; }
+.reference-page :is(.cliente-kpi, .usuario-kpi) strong { font-size: 30px; line-height: 1.2; margin-top: 5px; }
+.reference-page :is(.cliente-kpi, .usuario-kpi) small { display: block; color: var(--text-muted); font-size: 10px; margin-top: 5px; }
+.lf-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 360px); gap: 16px; align-items: start; flex: 1; min-height: 0; }
+.reference-page :is(.clientes-table-card, .usuarios-table-card) { min-width: 0; min-height: 540px; overflow: visible; display: flex; flex-direction: column; }
+.reference-page :is(.clientes-table-header, .usuarios-table-header) { display: flex; align-items: center; justify-content: flex-start; gap: 13px; padding: 18px; }
+.reference-page :is(.clientes-table-header, .usuarios-table-header) h3 { font-size: 17px; }
+.reference-page :is(.clientes-table-header, .usuarios-table-header) span { font-size: 11px; }
+.lf-heading-icon { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 44px; height: 44px; color: var(--accent); border: 1px solid #0088dd44; border-radius: 10px; background: linear-gradient(140deg, #1463f633, #00c9fe14); }
+.reference-page :is(.clientes-toolbar, .usuarios-toolbar) { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 14px; }
+.reference-page :is(.clientes-search, .usuarios-search) { flex: 1 1 230px; height: 38px; }
+.reference-page :is(.clientes-search, .usuarios-search) input { font-size: 11px; width: 100%; }
+.reference-page :is(.clientes-toolbar, .usuarios-toolbar) select { height: 38px; font-size: 11px; flex: 1 1 115px; min-width: 0; }
+.reference-page :is(.clientes-resultado, .usuarios-resultado) { display: none; }
+.reference-page :is(.clientes-table-wrapper, .usuarios-table-wrapper) { flex: 1; min-height: 360px; overflow: auto; margin: 0; }
+.reference-page :is(.clientes-table, .usuarios-table) { width: 100%; min-width: 700px; table-layout: auto; }
+.reference-page :is(.clientes-table, .usuarios-table) th { padding: 12px; font-size: 11px; height: 40px; white-space: nowrap; }
+.reference-page :is(.clientes-table, .usuarios-table) td { font-size: 11px; height: 51px; padding: 9px 12px; white-space: nowrap; max-width: 210px; }
+.reference-page :is(.cliente-identidade, .usuario-identidade) strong { font-size: 11px; }
+.reference-page :is(.cliente-codigo, .usuario-codigo) { font-size: 10px; }
+.reference-page :is(.cliente-avatar, .usuario-avatar) { width: 33px; height: 33px; font-size: 11px; }
+.reference-page :is(.cliente-status, .usuario-status, .usuario-perfil-badge) { font-size: 10px; min-height: 24px; }
+.lf-code { color: var(--accent); font-weight: 650; }
+.lf-sort { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; padding: 0; display: inline-flex; align-items: center; gap: 6px; }
+.lf-row-select { background: transparent; border: 0; text-align: left; color: inherit; font: inherit; cursor: pointer; padding: 0; white-space: nowrap; }
+.reference-page .usuarios-table th:first-child { min-width: 210px; }
+.reference-page .usuario-identidade strong { white-space: nowrap; overflow-wrap: normal; }
+.reference-page .usuarios-table tr.lf-selected td { background: #00c9fe12; border-bottom-color: #00c9fe55; }
+.reference-page .usuarios-table tr.lf-selected td:first-child { box-shadow: inset 3px 0 var(--accent); }
+.lf-pagination { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 16px 14px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 10px; }
+.lf-pagination > span { flex: 1; }
+.lf-pagination nav { display: flex; gap: 5px; }
+.lf-pagination button, .lf-pagination select { height: 30px; min-width: 30px; border: 1px solid var(--border); border-radius: 6px; color: var(--text); background: var(--input-bg); font: inherit; }
+.lf-pagination button { cursor: pointer; }
+.lf-pagination button[aria-current] { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.lf-pagination button:disabled { opacity: .4; cursor: default; }
+.lf-pagination select { padding: 0 8px; }
+.cliente-inline-panel { min-width: 0; border: 1px solid var(--border); border-radius: 12px; background: linear-gradient(145deg, var(--surface), #04192b); overflow: hidden; }
+.cliente-inline-panel .cliente-modal { width: 100%; max-width: none; max-height: none; box-shadow: none; background: transparent; border: 0; border-radius: 0; }
+.cliente-inline-panel .cliente-modal-header { padding: 18px; align-items: flex-start; }
+.cliente-inline-panel .cliente-modal-header h3 { font-size: 17px; margin: 4px 0; }
+.cliente-inline-panel .cliente-modal-header p { font-size: 11px; line-height: 1.5; }
+.cliente-inline-panel .cliente-form { padding: 16px; overflow: visible; gap: 13px; }
+.cliente-inline-panel .cliente-form-section { padding: 0; border: 0; background: transparent; gap: 11px; margin-bottom: 10px; }
+.cliente-inline-panel .cliente-section-title { margin-bottom: 8px; }
+.cliente-inline-panel .cliente-section-title, .cliente-inline-panel .cliente-modal-subtitle { display: none; }
+.cliente-inline-panel .cliente-form-group { margin-bottom: 6px; }
+html[data-theme="blue"] .reference-page .lf-heading-icon { color: var(--accent) !important; }
+.cliente-inline-panel .cliente-section-title { font-size: 10px; letter-spacing: .5px; color: var(--accent); }
+.cliente-inline-panel .cliente-form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.cliente-inline-panel .cliente-form-row.endereco-principal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cliente-inline-panel .logradouro { grid-column: 1 / -1; grid-row: 2; }
+.cliente-inline-panel .cliente-form-group { min-width: 0; }
+.cliente-inline-panel .cliente-form-group label { font-size: 11px; }
+.cliente-inline-panel .cliente-form-group :is(input, select) { height: 34px; font-size: 11px; min-width: 0; width: 100%; }
+.cliente-inline-panel .cliente-modal-actions { padding: 8px 0 0; margin: 0; gap: 8px; }
+.cliente-inline-panel .cliente-modal-button { flex: 1; height: 38px; font-size: 11px; }
+.lf-sidebar { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.lf-panel { padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: linear-gradient(145deg, var(--surface), #04192b); }
+.lf-panel-total { margin-left: auto; font-size: 23px; color: var(--success); }
+.usuarios-page.reference-page .usuarios-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); width: calc(100% - 376px); }
+.usuarios-page.reference-page .lf-sidebar { margin-top: -138px; }
+.usuarios-page.reference-page .lf-panel { padding: 16px; }
+.usuarios-page.reference-page .lf-contact-list { gap: 8px; }
+.usuarios-page.reference-page .lf-permission-list li { padding: 6px 0; }
+.usuarios-page.reference-page .lf-timeline li { padding-bottom: 8px; }
+.lf-panel h3 { display: flex; align-items: center; gap: 9px; margin: 0 0 15px; font-size: 15px; }
+.lf-panel h3 svg { color: var(--accent); }
+.lf-panel-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.lf-panel-head button { color: var(--text); border: 1px solid var(--border-strong); border-radius: 6px; background: var(--input-bg); padding: 7px 10px; font: inherit; font-size: 10px; cursor: pointer; }
+.lf-selected-user { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.lf-user-avatar { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; border: 1px solid #24dcce55; background: #00bea022; color: #9affed; border-radius: 12px; font-weight: 650; }
+.lf-selected-user strong { display: block; font-size: 14px; }
+.lf-selected-user span { font-size: 11px; display: block; color: var(--text-muted); margin-top: 5px; }
+.lf-contact-list { display: grid; gap: 11px; font-size: 11px; color: var(--text-muted); margin: 0; }
+.lf-contact-list div { overflow-wrap: anywhere; }
+.lf-contact-list dt { display: inline; color: var(--text); }
+.lf-contact-list dd { display: inline; margin-left: 6px; }
+.lf-permission-list { list-style: none; padding: 0; margin: 12px 0 0; }
+.lf-permission-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid #16365388; font-size: 11px; }
+.lf-permission-list small { font-size: 10px; color: var(--accent); }
+.lf-panel p { font-size: 11px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+.lf-timeline { list-style: none; padding: 0 0 0 15px; margin: 0; border-left: 1px solid var(--border-strong); }
+.lf-timeline li { position: relative; padding: 0 0 16px; }
+.lf-timeline li::before { content: ''; position: absolute; left: -20px; top: 3px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px #00c9fe44; }
+.lf-timeline strong { font-size: 11px; font-weight: 500; }
+.lf-timeline small { display: block; font-size: 10px; color: var(--text-muted); margin-top: 4px; }
+.lf-access-dialog { position: fixed; inset: 0; z-index: 1200; display: grid; place-items: center; padding: 24px; background: #000c1cd9; }
+.lf-access-dialog > section { width: min(780px, 100%); max-height: 80vh; overflow: auto; }
+.lf-access-dialog table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 16px; }
+.lf-access-dialog td, .lf-access-dialog th { padding: 12px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+.reference-page :is(button, input, select):focus-visible, .relatorios-reference-page :is(button, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (min-width: 1600px) {
+  .lf-workspace { grid-template-columns: minmax(0, 1fr) 390px; }
+  .usuarios-page.reference-page .usuarios-kpis { width: calc(100% - 406px); }
+  .reference-page :is(.clientes-table, .usuarios-table) td { height: 55px; font-size: 12px; }
+}
+@media (max-width: 1100px) {
+  .lf-workspace { grid-template-columns: minmax(0, 1fr); flex: 0 0 auto; min-height: auto; }
+  .usuarios-page.reference-page .usuarios-kpis { width: 100%; }
+  .usuarios-page.reference-page .lf-sidebar { margin-top: 0; }
+  .lf-sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cliente-inline-panel { max-width: none; }
+  .cliente-inline-panel .cliente-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cliente-inline-panel .cliente-form-section:last-of-type, .cliente-inline-panel .cliente-modal-actions, .cliente-inline-panel .cliente-form-message { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .clientes-page.reference-page, .usuarios-page.reference-page { padding: 16px 12px; }
+  .reference-page :is(.clientes-kpis, .usuarios-kpis) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .reference-page :is(.cliente-kpi, .usuario-kpi) { padding: 12px; gap: 10px; }
+  .reference-page :is(.cliente-kpi-icon, .usuario-kpi-icon) { width: 35px; height: 35px; }
+  .reference-page :is(.cliente-kpi, .usuario-kpi) strong { font-size: 25px; }
+  .reference-page :is(.cliente-kpi, .usuario-kpi) span { font-size: 10px; }
+  .lf-sidebar, .cliente-inline-panel .cliente-form { display: flex; flex-direction: column; }
+  .lf-pagination > span { flex-basis: 100%; }
+}
+
+/* Relatórios: conteúdo pode crescer e rolar sem cortar tabelas ou gráficos. */
+html[data-theme="blue"] .content.relatorios-reference-page {
+  display: flex; flex-direction: column; overflow-y: auto !important; overflow-x: hidden !important;
+  gap: 16px; padding-bottom: 24px !important;
+}
+.relatorios-reference-page .relatorios-page-header { flex-wrap: wrap; gap: 16px; min-height: 64px; flex-shrink: 0; }
+.relatorios-reference-page .relatorios-reference-charts { flex-shrink: 0; }
+.relatorios-reference-page .relatorio-reference-card { min-height: 305px; }
+.relatorios-reference-page .relatorio-visual-chart { min-height: 180px; }
+.relatorios-reference-page .relatorio-reference-title h3 { font-size: 15px; line-height: 1.25; }
+.relatorios-reference-page .relatorio-reference-title p { font-size: 10px; line-height: 1.5; }
+.relatorios-reference-page .relatorio-reference-metric { min-height: 60px; align-items: center; flex-wrap: wrap; }
+.relatorios-reference-page .relatorio-reference-metric span { font-size: 10px; }
+.relatorios-reference-page .relatorios-reference-bottom { flex-shrink: 0; align-items: start; }
+.relatorios-reference-page .relatorio-reference-table-card { min-height: 365px; }
+.relatorios-reference-page .relatorio-table-wrapper { max-height: 450px; min-height: 280px; }
+.relatorios-reference-page .relatorio-reference-table th { font-size: 11px; }
+.relatorios-reference-page .relatorio-reference-table td { font-size: 11px; height: 43px; white-space: normal; overflow-wrap: anywhere; }
+.relatorios-reference-page .relatorio-reference-table td:first-child { display: table-cell; }
+.relatorios-reference-page .relatorio-file-icon, .relatorios-reference-page .relatorio-user-avatar { vertical-align: middle; margin-right: 6px; }
+.relatorios-reference-page .relatorio-download-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-size: 10px; }
+.relatorios-reference-page .relatorio-link-button { font-size: 10px; cursor: pointer; }
+.relatorios-reference-page .relatorios-button { display: inline-flex; align-items: center; gap: 8px; }
+.lf-chart-empty { min-height: 180px; padding: 24px; display: grid; place-items: center; text-align: center; color: var(--text-muted); font-size: 12px; line-height: 1.5; }
+.lf-report-context { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; flex-shrink: 0; font-size: 10px; color: var(--text-muted); }
+.lf-report-context > span { display: flex; align-items: center; gap: 7px; }
+.lf-report-context > span:nth-child(2) { flex: 1; }
+@media (max-width: 1250px) {
+  .relatorios-reference-page .relatorios-reference-charts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .relatorios-reference-page .relatorio-reference-card.receita { grid-column: 1 / -1; min-height: 280px; }
+  .relatorios-reference-page .relatorio-receita-layout { max-width: 700px; width: 100%; align-self: center; }
+}
+@media (max-width: 950px) {
+  .relatorios-reference-page .relatorios-reference-bottom { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 650px) {
+  .relatorios-reference-page .relatorios-reference-charts { grid-template-columns: minmax(0, 1fr); }
+  .relatorios-reference-page .relatorios-actions { flex-wrap: wrap; }
+  html[data-theme="blue"] .relatorios-reference-page .relatorios-periodo { width: 100%; }
+  .relatorios-reference-page .relatorio-reference-table { min-width: 570px; }
+}

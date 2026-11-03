@@ -1,0 +1,1 @@
+"""Distribuição Windows do NexoLog."""

@@ -1,0 +1,2178 @@
+/* ============================================================
+   LOGIFLOW
+   RELATÓRIOS & AUDITORIA
+============================================================ */
+
+
+/* ============================================================
+   PÁGINA
+============================================================ */
+
+.relatorios-page {
+  gap: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 14px;
+}
+
+
+/* ============================================================
+   CABEÇALHO
+============================================================ */
+
+.relatorios-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 20px;
+}
+
+
+.relatorios-page-header h2 {
+  margin: 0 0 3px;
+  color: var(--text-main);
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+
+.relatorios-page-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+
+.relatorios-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+.relatorios-periodo {
+  height: 36px;
+  padding: 0 11px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  outline: 0;
+  background: var(--input-bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+
+.relatorios-button {
+  height: 36px;
+  padding: 0 13px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.relatorios-button:hover {
+  transform: translateY(-1px);
+}
+
+
+.relatorios-button.secondary {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+}
+
+
+.relatorios-button.primary {
+  border: 1px solid var(--accent);
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent-strong),
+      var(--accent-strong)
+    );
+  color: var(--accent-contrast);
+}
+
+
+/* ============================================================
+   ERRO
+============================================================ */
+
+.relatorios-error {
+  padding: 9px 11px;
+  border:
+    1px solid
+    rgba(var(--danger-rgb), 0.35);
+  border-radius: 8px;
+  background:
+    rgba(var(--danger-rgb), 0.10);
+  color: var(--danger-soft-text);
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   KPIS
+============================================================ */
+
+.relatorios-kpis {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+.relatorio-kpi {
+  min-height: 84px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface),
+      var(--surface-alt)
+    );
+}
+
+
+.relatorio-kpi-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.relatorio-kpi-icon.valor {
+  border:
+    1px solid
+    rgba(var(--accent-rgb), 0.25);
+  background:
+    rgba(var(--accent-rgb), 0.10);
+  color: var(--accent);
+}
+
+
+.relatorio-kpi-icon.entregues {
+  border:
+    1px solid
+    rgba(var(--success-rgb), 0.25);
+  background:
+    rgba(var(--success-rgb), 0.09);
+  color: var(--success);
+}
+
+
+.relatorio-kpi-icon.movimentacoes {
+  border:
+    1px solid
+    rgba(var(--secondary-rgb), 0.25);
+  background:
+    rgba(var(--secondary-rgb), 0.09);
+  color: var(--secondary);
+}
+
+
+.relatorio-kpi-icon.leadtime {
+  border:
+    1px solid
+    rgba(var(--warning-rgb), 0.25);
+  background:
+    rgba(var(--warning-rgb), 0.08);
+  color: var(--warning);
+}
+
+
+.relatorio-kpi > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.relatorio-kpi span {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+
+.relatorio-kpi strong {
+  overflow: hidden;
+  color: var(--text-main);
+  font-size: 20px;
+  line-height: 1.05;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   CARDS
+============================================================ */
+
+.relatorio-card {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface),
+      var(--surface-alt)
+    );
+}
+
+
+.relatorio-card-header {
+  min-height: 58px;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 12px;
+  border-bottom:
+    1px solid
+    rgba(var(--border-rgb), 0.7);
+}
+
+
+.relatorio-card-header h3 {
+  margin: 0 0 3px;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+
+.relatorio-card-header span {
+  color: var(--text-subtle);
+  font-size: 9px;
+}
+
+
+.relatorio-card-header > strong {
+  color: var(--warning);
+  font-size: 10px;
+}
+
+
+.relatorio-card-conteudo {
+  min-height: 0;
+  flex: 1;
+  padding: 14px;
+}
+
+
+.relatorio-loading,
+.relatorio-grafico-vazio {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-subtle);
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   GRÁFICOS
+============================================================ */
+
+.relatorios-graficos {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(270px, 0.75fr)
+    minmax(300px, 0.95fr);
+  gap: 10px;
+  min-height: 280px;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   FLUXO DE ESTOQUE
+============================================================ */
+
+.relatorio-fluxo-chart {
+  height: 100%;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.relatorio-fluxo-legenda {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+
+.relatorio-fluxo-legenda span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 8.5px;
+}
+
+
+.relatorio-fluxo-legenda i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+
+.relatorio-fluxo-legenda i.entrada {
+  background: var(--success);
+}
+
+
+.relatorio-fluxo-legenda i.saida {
+  background: var(--danger);
+}
+
+
+.relatorio-fluxo-barras {
+  min-height: 150px;
+  flex: 1;
+  display: grid;
+  grid-template-columns:
+    repeat(
+      14,
+      minmax(0, 1fr)
+    );
+  align-items: end;
+  gap: 5px;
+  padding-top: 6px;
+  border-bottom:
+    1px solid
+    rgba(var(--text-subtle-rgb), 0.55);
+}
+
+
+.relatorio-fluxo-dia {
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.relatorio-fluxo-par {
+  width: 100%;
+  height: calc(100% - 24px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+}
+
+
+.relatorio-fluxo-coluna {
+  width: min(10px, 35%);
+  min-height: 3px;
+  border-radius: 3px 3px 0 0;
+}
+
+
+.relatorio-fluxo-coluna.entrada {
+  background:
+    linear-gradient(
+      180deg,
+      var(--success),
+      var(--success-deep)
+    );
+}
+
+
+.relatorio-fluxo-coluna.saida {
+  background:
+    linear-gradient(
+      180deg,
+      var(--danger),
+      var(--danger-deep)
+    );
+}
+
+
+.relatorio-fluxo-dia > span {
+  margin-top: 7px;
+  color: var(--text-subtle);
+  font-size: 7px;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   TOOLTIP DO GRÁFICO
+============================================================ */
+
+.relatorio-fluxo-dia {
+  position: relative;
+}
+
+
+.relatorio-fluxo-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 38px;
+  z-index: 50;
+  width: 142px;
+  padding: 9px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border: 1px solid var(--border-strong);
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface),
+      var(--input-bg)
+    );
+  box-shadow:
+    0 14px 34px
+    rgba(0, 0, 0, 0.40);
+  opacity: 0;
+  pointer-events: none;
+  transform:
+    translateX(-50%)
+    translateY(4px);
+  transition:
+    opacity 0.14s ease,
+    transform 0.14s ease;
+}
+
+
+.relatorio-fluxo-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  border-right: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--input-bg);
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+.relatorio-fluxo-dia:hover
+.relatorio-fluxo-tooltip {
+  opacity: 1;
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+.relatorio-fluxo-tooltip > strong {
+  padding-bottom: 6px;
+  border-bottom:
+    1px solid
+    rgba(var(--border-strong-rgb), 0.65);
+  color: var(--text-main);
+  font-size: 10px;
+  line-height: 1;
+}
+
+
+.relatorio-fluxo-tooltip > span {
+  display: grid;
+  grid-template-columns:
+    8px
+    1fr
+    auto;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 8.5px;
+}
+
+
+.relatorio-fluxo-tooltip > span i {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+}
+
+
+.relatorio-fluxo-tooltip > span i.entrada {
+  background: var(--success);
+}
+
+
+.relatorio-fluxo-tooltip > span i.saida {
+  background: var(--danger);
+}
+
+
+.relatorio-fluxo-tooltip > span b {
+  color: var(--text-main);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* Evita que o tooltip das primeiras colunas
+   seja cortado na lateral esquerda. */
+
+.relatorio-fluxo-dia:nth-child(-n+2)
+.relatorio-fluxo-tooltip {
+  left: 0;
+  transform:
+    translateY(4px);
+}
+
+
+.relatorio-fluxo-dia:nth-child(-n+2):hover
+.relatorio-fluxo-tooltip {
+  transform:
+    translateY(0);
+}
+
+
+.relatorio-fluxo-dia:nth-child(-n+2)
+.relatorio-fluxo-tooltip::after {
+  left: 18px;
+  transform:
+    rotate(45deg);
+}
+
+
+/* Evita que o tooltip das últimas colunas
+   seja cortado na lateral direita. */
+
+.relatorio-fluxo-dia:nth-last-child(-n+2)
+.relatorio-fluxo-tooltip {
+  right: 0;
+  left: auto;
+  transform:
+    translateY(4px);
+}
+
+
+.relatorio-fluxo-dia:nth-last-child(-n+2):hover
+.relatorio-fluxo-tooltip {
+  transform:
+    translateY(0);
+}
+
+
+.relatorio-fluxo-dia:nth-last-child(-n+2)
+.relatorio-fluxo-tooltip::after {
+  right: 18px;
+  left: auto;
+  transform:
+    rotate(45deg);
+}
+
+
+/* ============================================================
+   STATUS DOS PEDIDOS
+============================================================ */
+
+.relatorio-status-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 3px;
+}
+
+
+.relatorio-status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+.relatorio-status-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.relatorio-status-linha > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text);
+  font-size: 9.5px;
+}
+
+
+.relatorio-status-linha i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+
+.relatorio-status-linha i.pendente {
+  background: var(--warning);
+}
+
+
+.relatorio-status-linha i.processando {
+  background: var(--accent);
+}
+
+
+.relatorio-status-linha i.enviado {
+  background: var(--secondary);
+}
+
+
+.relatorio-status-linha i.entregue {
+  background: var(--success);
+}
+
+
+.relatorio-status-linha strong {
+  color: var(--text-main);
+  font-size: 11px;
+}
+
+
+.relatorio-status-barra {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background:
+    rgba(var(--border-strong-rgb), 0.42);
+}
+
+
+.relatorio-status-preenchimento {
+  height: 100%;
+  min-width: 0;
+  border-radius: inherit;
+}
+
+
+.relatorio-status-preenchimento.pendente {
+  background: var(--warning);
+}
+
+
+.relatorio-status-preenchimento.processando {
+  background: var(--accent);
+}
+
+
+.relatorio-status-preenchimento.enviado {
+  background: var(--secondary);
+}
+
+
+.relatorio-status-preenchimento.entregue {
+  background: var(--success);
+}
+
+
+/* ============================================================
+   RANKING DE CLIENTES
+============================================================ */
+
+.relatorio-clientes-ranking {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+
+.relatorio-cliente-ranking {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+.relatorio-ranking-posicao {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border:
+    1px solid
+    rgba(var(--accent-rgb), 0.22);
+  border-radius: 6px;
+  background:
+    rgba(var(--accent-rgb), 0.07);
+  color: var(--accent);
+  font-size: 8.5px;
+  font-weight: 700;
+}
+
+
+.relatorio-ranking-conteudo {
+  min-width: 0;
+  flex: 1;
+}
+
+
+.relatorio-ranking-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  margin-bottom: 6px;
+}
+
+
+.relatorio-ranking-linha span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.relatorio-ranking-linha strong {
+  flex-shrink: 0;
+  color: var(--success);
+  font-size: 9px;
+}
+
+
+.relatorio-ranking-barra {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background:
+    rgba(var(--border-strong-rgb), 0.42);
+}
+
+
+.relatorio-ranking-barra > div {
+  height: 100%;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent-strong),
+      var(--secondary)
+    );
+}
+
+
+/* ============================================================
+   PARTE INFERIOR
+============================================================ */
+
+.relatorios-bottom-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(360px, 0.8fr)
+    minmax(0, 1.2fr);
+  gap: 10px;
+  min-height: 300px;
+  padding-bottom: 12px;
+}
+
+
+.relatorio-link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+
+.relatorio-link-button:hover {
+  color: var(--accent-soft-text);
+}
+
+
+/* ============================================================
+   TABELAS
+============================================================ */
+
+.relatorio-table-wrapper {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.relatorio-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+
+.relatorio-table thead {
+  background:
+    rgba(var(--surface-alt-rgb), 0.85);
+}
+
+
+.relatorio-table th {
+  height: 32px;
+  padding: 6px 9px;
+  color: var(--text-muted);
+  font-size: 9px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+.relatorio-table td {
+  min-height: 40px;
+  padding: 8px 9px;
+  border-top:
+    1px solid
+    rgba(var(--border-rgb), 0.48);
+  overflow: hidden;
+  color: var(--text);
+  font-size: 9.2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.relatorio-table td strong {
+  color: var(--text-main);
+  font-size: 9.5px;
+}
+
+
+.relatorio-historico .relatorio-table th:nth-child(1) {
+  width: 35%;
+}
+
+
+.relatorio-historico .relatorio-table th:nth-child(2) {
+  width: 18%;
+}
+
+
+.relatorio-historico .relatorio-table th:nth-child(3) {
+  width: 29%;
+}
+
+
+.relatorio-historico .relatorio-table th:nth-child(4) {
+  width: 18%;
+}
+
+
+.relatorio-audit-table th:nth-child(1) {
+  width: 12%;
+}
+
+
+.relatorio-audit-table th:nth-child(2) {
+  width: 23%;
+}
+
+
+.relatorio-audit-table th:nth-child(3) {
+  width: 24%;
+}
+
+
+.relatorio-audit-table th:nth-child(4) {
+  width: 41%;
+}
+
+
+.relatorio-formato-badge {
+  min-height: 21px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px;
+  border:
+    1px solid
+    rgba(var(--secondary-rgb), 0.28);
+  border-radius: 6px;
+  background:
+    rgba(var(--secondary-rgb), 0.08);
+  color: var(--secondary-soft-text);
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+.relatorio-download-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 8.5px;
+  cursor: pointer;
+}
+
+
+.relatorio-usuario {
+  color: var(--accent);
+  font-size: 8.5px;
+  font-weight: 600;
+}
+
+
+.relatorio-vazio {
+  height: 80px !important;
+  color: var(--text-subtle) !important;
+  text-align: center;
+}
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+.relatorio-toast {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border:
+    1px solid
+    rgba(var(--success-rgb), 0.35);
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface),
+      var(--input-bg)
+    );
+  color: var(--text);
+  font-size: 10px;
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.38);
+}
+
+
+.relatorio-toast span {
+  color: var(--success);
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+============================================================ */
+
+@media (
+  max-width: 1250px
+) {
+
+  .relatorios-kpis {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .relatorios-graficos {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .relatorio-card-fluxo {
+    grid-column:
+      span 2;
+  }
+
+
+  .relatorios-bottom-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+@media (
+  max-width: 800px
+) {
+
+  .relatorios-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .relatorios-actions {
+    flex-wrap: wrap;
+  }
+
+
+  .relatorios-kpis,
+  .relatorios-graficos {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .relatorio-card-fluxo {
+    grid-column:
+      auto;
+  }
+
+}
+
+
+/* ============================================================
+   AJUSTE PARA ZOOM 100% / TELAS DESKTOP COM MENOR ALTURA
+   Mantém o layout completo sem "quebrar" verticalmente.
+============================================================ */
+
+@media (
+  min-width: 1251px
+) and (
+  max-height: 970px
+) {
+
+  .relatorios-page {
+    gap: 10px;
+    padding-bottom: 10px;
+    overflow-y: hidden;
+  }
+
+
+  .relatorios-page-header h2 {
+    font-size: 24px;
+  }
+
+
+  .relatorios-page-header p {
+    font-size: 10.5px;
+  }
+
+
+  .relatorios-periodo,
+  .relatorios-button {
+    height: 34px;
+  }
+
+
+  .relatorios-kpis {
+    gap: 9px;
+  }
+
+
+  .relatorio-kpi {
+    min-height: 74px;
+    padding: 10px 14px;
+    gap: 11px;
+  }
+
+
+  .relatorio-kpi-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+
+  .relatorio-kpi span {
+    font-size: 9.5px;
+  }
+
+
+  .relatorio-kpi strong {
+    font-size: 19px;
+  }
+
+
+  .relatorios-graficos {
+    min-height: 236px;
+    flex: 0 0 236px;
+    gap: 9px;
+  }
+
+
+  .relatorio-card-header {
+    min-height: 50px;
+    padding: 7px 12px;
+  }
+
+
+  .relatorio-card-header h3 {
+    font-size: 13.5px;
+  }
+
+
+  .relatorio-card-header span {
+    font-size: 8.5px;
+  }
+
+
+  .relatorio-card-conteudo {
+    padding: 10px 12px;
+  }
+
+
+  .relatorio-fluxo-chart {
+    min-height: 150px;
+  }
+
+
+  .relatorio-fluxo-legenda {
+    margin-bottom: 7px;
+  }
+
+
+  .relatorio-fluxo-barras {
+    min-height: 122px;
+  }
+
+
+  .relatorio-fluxo-dia > span {
+    margin-top: 5px;
+    font-size: 6.8px;
+  }
+
+
+  .relatorio-status-lista {
+    gap: 12px;
+  }
+
+
+  .relatorio-clientes-ranking {
+    gap: 10px;
+  }
+
+
+  .relatorios-bottom-grid {
+    min-height: 0;
+    flex: 1 1 205px;
+    gap: 9px;
+    padding-bottom: 0;
+  }
+
+
+  .relatorio-table th {
+    height: 29px;
+    padding: 5px 8px;
+  }
+
+
+  .relatorio-table td {
+    min-height: 34px;
+    padding: 6px 8px;
+  }
+
+
+  .relatorio-vazio {
+    height: 62px !important;
+  }
+
+
+  .relatorio-fluxo-tooltip {
+    bottom: 34px;
+  }
+
+}
+
+
+/* ============================================================
+   IMPRESSÃO / PDF
+============================================================ */
+
+@media print {
+
+  body {
+    background: #ffffff !important;
+  }
+
+
+  .sidebar,
+  .topbar,
+  .relatorios-actions,
+  .relatorio-link-button,
+  .relatorio-download-button,
+  .relatorio-toast {
+    display: none !important;
+  }
+
+
+  .main-area {
+    margin: 0 !important;
+  }
+
+
+  .content.relatorios-page {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+
+  .relatorios-page-header h2,
+  .relatorio-kpi strong,
+  .relatorio-card-header h3,
+  .relatorio-table td strong {
+    color: #111827 !important;
+  }
+
+
+  .relatorios-page-header p,
+  .relatorio-kpi span,
+  .relatorio-card-header span,
+  .relatorio-table th,
+  .relatorio-table td {
+    color: #374151 !important;
+  }
+
+
+  .relatorio-kpi,
+  .relatorio-card {
+    break-inside: avoid;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+
+  .relatorios-graficos,
+  .relatorios-bottom-grid {
+    display: block !important;
+  }
+
+
+  .relatorio-card {
+    margin-bottom: 12px;
+  }
+
+}
+
+
+/* ============================================================
+   PADRÃO VISUAL GLOBAL — LOGIFLOW
+   Página: relatorios-page
+============================================================ */
+
+/* ============================================================
+   MARGENS / RESPIRO DA PÁGINA
+============================================================ */
+
+.relatorios-page {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  gap: 12px;
+  padding: 16px 24px 18px;
+  overflow-x: hidden;
+}
+
+
+/* ============================================================
+   TIPOGRAFIA PRINCIPAL
+============================================================ */
+
+.relatorios-page-header h2 {
+  margin: 0 0 3px;
+  color: var(--text-main);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+
+.relatorios-page-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+
+.relatorios-button {
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   KPIs
+============================================================ */
+
+.relatorio-kpi span {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+.relatorio-kpi strong {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+/* ============================================================
+   TABELAS
+============================================================ */
+
+.relatorio-table th {
+  color: var(--text-muted);
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+
+.relatorio-table td {
+  color: var(--text);
+  font-size: 10.8px;
+}
+
+
+/* ============================================================
+   BARRA DE ROLAGEM
+   Mesmo padrão em página, tabelas, listas e modais
+============================================================ */
+
+.relatorios-page,
+.relatorios-page * {
+  scrollbar-width: thin;
+  scrollbar-color:
+    rgba(var(--text-subtle-rgb), 0.30)
+    transparent;
+}
+
+
+.relatorios-page::-webkit-scrollbar,
+.relatorios-page *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+.relatorios-page::-webkit-scrollbar-track,
+.relatorios-page *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.relatorios-page::-webkit-scrollbar-thumb,
+.relatorios-page *::-webkit-scrollbar-thumb {
+  min-height: 36px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background:
+    rgba(var(--text-subtle-rgb), 0.30);
+  background-clip: content-box;
+}
+
+
+.relatorios-page::-webkit-scrollbar-thumb:hover,
+.relatorios-page *::-webkit-scrollbar-thumb:hover {
+  background:
+    rgba(var(--text-muted-rgb), 0.48);
+  background-clip: content-box;
+}
+
+
+.relatorios-page::-webkit-scrollbar-corner,
+.relatorios-page *::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE DAS MARGENS
+============================================================ */
+
+@media (max-width: 1200px) {
+
+  .relatorios-page {
+    padding:
+      14px
+      18px
+      16px;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .relatorios-page {
+    padding:
+      12px
+      14px
+      14px;
+  }
+
+}
+
+
+.relatorio-card-header h3 {
+  margin: 0 0 3px;
+  color: var(--text-main);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+
+.relatorio-card-header span {
+  color: var(--text-subtle);
+  font-size: 9px;
+}
+
+
+.relatorio-table-wrapper,
+.relatorios-page {
+  scrollbar-gutter: stable;
+}
+
+
+.relatorios-periodo {
+  font-size: 10px;
+}
+
+/* ============================================================
+   LOTE 07 - PADRONIZAÇÃO TIPOGRÁFICA
+   RELATÓRIOS
+============================================================ */
+
+.relatorios-page-header h2 {
+  font-size: 26px;
+}
+
+.relatorios-page-header p {
+  font-size: 12px;
+}
+
+.relatorios-periodo,
+.relatorios-button {
+  font-size: 10.5px;
+}
+
+.relatorio-kpi span {
+  font-size: 10.5px;
+}
+
+.relatorio-kpi strong {
+  font-size: 23px;
+}
+
+.relatorio-card-header > strong {
+  font-size: 14.5px;
+}
+
+.relatorio-card-header span {
+  font-size: 9.5px;
+}
+
+.relatorio-loading,
+.relatorio-grafico-vazio {
+  font-size: 10.5px;
+}
+
+.relatorio-fluxo-legenda span {
+  font-size: 9px;
+}
+
+.relatorio-fluxo-dia > span {
+  font-size: 8px;
+}
+
+.relatorio-fluxo-tooltip > strong {
+  font-size: 10.5px;
+}
+
+.relatorio-fluxo-tooltip > span {
+  font-size: 9px;
+}
+
+.relatorio-status-linha > span,
+.relatorio-ranking-linha span,
+.relatorio-ranking-linha strong {
+  font-size: 9.5px;
+}
+
+.relatorio-link-button {
+  font-size: 9.5px;
+}
+
+.relatorio-table th {
+  font-size: 10px;
+}
+
+.relatorio-table td {
+  font-size: 10.5px;
+}
+
+.relatorio-table td strong {
+  font-size: 10.5px;
+}
+
+.relatorio-formato-badge,
+.relatorio-download-button,
+.relatorio-usuario {
+  font-size: 9px;
+}
+
+
+/* ============================================================
+   LOTE 11 - ZOOM 100% / TIPOGRAFIA
+============================================================ */
+
+.relatorios-page {
+  height: calc(100vh - 66px) !important;
+  min-height: 0 !important;
+  padding: 16px 24px 16px !important;
+  gap: 12px !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+.relatorios-page-header {
+  min-height: 56px;
+}
+
+.relatorios-page-header h2 {
+  font-size: 27px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.7px;
+}
+
+.relatorios-page-header p {
+  font-size: 11.5px !important;
+}
+
+.relatorios-periodo,
+.relatorios-button {
+  height: 38px !important;
+  font-size: 10px !important;
+}
+
+.relatorios-kpis {
+  gap: 10px !important;
+}
+
+.relatorio-kpi {
+  min-height: 80px !important;
+  padding: 11px 14px !important;
+}
+
+.relatorio-kpi span {
+  font-size: 10px !important;
+}
+
+.relatorio-kpi strong {
+  font-size: 22px !important;
+}
+
+.relatorio-card-header {
+  min-height: 54px !important;
+}
+
+.relatorio-card-header h3,
+.relatorio-card-header > strong {
+  font-size: 14px !important;
+}
+
+.relatorio-card-header span {
+  font-size: 8.7px !important;
+}
+
+.relatorio-table th {
+  font-size: 9.3px !important;
+}
+
+.relatorio-table td {
+  font-size: 10px !important;
+}
+
+@media (max-width: 1450px) and (min-width: 851px) {
+  .relatorios-page {
+    padding: 14px 18px 14px !important;
+  }
+
+  .relatorios-graficos {
+    min-height: 255px !important;
+  }
+}
+
+/* ============================================================
+   LOTE 12 - RELATÓRIOS / ESTRUTURA DO MOCKUP
+============================================================ */
+.relatorios-reference-page {
+  display: grid;
+  grid-template-rows: auto minmax(280px, 0.82fr) minmax(310px, 1.18fr);
+  gap: 14px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.relatorios-reference-charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1.08fr) minmax(0, 1.16fr);
+  gap: 12px;
+  min-height: 0;
+}
+
+.relatorio-reference-card,
+.relatorio-reference-table-card {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(145deg, var(--surface-alt), var(--surface));
+  box-shadow:
+    0 16px 34px rgba(0, 5, 18, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.relatorio-reference-card > header,
+.relatorio-reference-table-card > header {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 13px;
+}
+
+.relatorio-reference-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.relatorio-reference-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+  border-radius: 10px;
+  background: rgba(var(--accent-rgb), 0.10);
+  color: var(--accent);
+  font-size: 20px;
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.07);
+}
+
+.relatorio-reference-title h3 {
+  margin: 0 0 3px;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 720;
+  line-height: 1.08;
+}
+
+.relatorio-reference-title p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 8.5px;
+  line-height: 1.25;
+}
+
+.relatorio-reference-card > header > button {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.relatorio-reference-metric {
+  min-height: 62px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 14px 3px;
+}
+
+.relatorio-reference-metric > strong {
+  color: var(--text-main);
+  font-size: 25px;
+  font-weight: 760;
+  line-height: 1;
+}
+
+.relatorio-reference-metric > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 3px;
+}
+
+.relatorio-reference-metric b {
+  color: var(--success);
+  font-size: 10px;
+}
+
+.relatorio-reference-metric span {
+  color: var(--text-muted);
+  font-size: 8px;
+}
+
+.relatorio-visual-chart {
+  min-height: 0;
+  flex: 1;
+  padding: 0 9px 10px;
+}
+
+.relatorio-chart-tooltip {
+  min-width: 86px;
+  padding: 8px 9px;
+  border: 1px solid rgba(var(--border-strong-rgb), 0.82);
+  border-radius: 8px;
+  background: rgba(var(--surface-rgb), 0.98);
+  box-shadow: 0 14px 30px rgba(0, 5, 18, 0.28);
+}
+
+.relatorio-chart-tooltip strong,
+.relatorio-chart-tooltip span {
+  display: block;
+}
+
+.relatorio-chart-tooltip strong {
+  margin-bottom: 4px;
+  color: var(--text-main);
+  font-size: 8.5px;
+}
+
+.relatorio-chart-tooltip span {
+  color: var(--text-muted);
+  font-size: 7.5px;
+}
+
+.relatorio-receita-layout {
+  min-height: 0;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(130px, 0.90fr) minmax(155px, 1.1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px 12px;
+}
+
+.relatorio-donut-wrap {
+  position: relative;
+  height: 155px;
+  min-width: 0;
+}
+
+.relatorio-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.relatorio-donut-center strong {
+  max-width: 105px;
+  overflow: hidden;
+  color: var(--text-main);
+  font-size: 13px;
+  font-weight: 760;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.relatorio-donut-center span {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 8px;
+}
+
+.relatorio-receita-legenda {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.relatorio-receita-legenda > div {
+  display: grid;
+  grid-template-columns: 9px minmax(0, 1fr) 30px 62px;
+  align-items: center;
+  gap: 6px;
+}
+
+.relatorio-receita-legenda i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.relatorio-receita-legenda span,
+.relatorio-receita-legenda b,
+.relatorio-receita-legenda small {
+  font-size: 7.8px;
+}
+
+.relatorio-receita-legenda span {
+  overflow: hidden;
+  color: var(--text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.relatorio-receita-legenda b {
+  color: var(--text-main);
+  text-align: right;
+}
+
+.relatorio-receita-legenda small {
+  color: var(--text-muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.relatorios-reference-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 1fr);
+  gap: 14px;
+  min-height: 0;
+}
+
+.relatorio-reference-table-card > header {
+  min-height: 65px;
+  flex: 0 0 65px;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.48);
+}
+
+.relatorio-reference-table-card .relatorio-reference-icon {
+  width: 39px;
+  height: 39px;
+  flex-basis: 39px;
+  font-size: 18px;
+}
+
+.relatorio-link-button {
+  min-height: 34px;
+  padding: 0 15px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: rgba(var(--surface-alt-rgb), 0.55);
+  color: var(--text);
+  font-size: 8.5px;
+}
+
+.relatorio-reference-table-card .relatorio-table-wrapper {
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  padding: 0 10px 10px;
+}
+
+.relatorio-reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.relatorio-reference-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: rgba(var(--surface-alt-rgb), 0.88);
+}
+
+.relatorio-reference-table th {
+  height: 34px;
+  padding: 0 8px;
+  color: var(--text-muted);
+  font-size: 8.2px;
+  font-weight: 560;
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.46);
+}
+
+.relatorio-reference-table td {
+  height: 36px;
+  padding: 0 8px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 8.1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.32);
+}
+
+.relatorio-reference-table td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.relatorio-reference-table td strong {
+  overflow: hidden;
+  font-weight: 560;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.relatorio-reference-table th:nth-child(1) { width: 37%; }
+.relatorio-reference-table th:nth-child(2) { width: 25%; }
+.relatorio-reference-table th:nth-child(3) { width: 12%; }
+.relatorio-reference-table th:nth-child(4) { width: 20%; }
+.relatorio-reference-table th:nth-child(5) { width: 6%; }
+
+.relatorio-reference-table.audit th:nth-child(1) { width: 22%; }
+.relatorio-reference-table.audit th:nth-child(2) { width: 30%; }
+.relatorio-reference-table.audit th:nth-child(3) { width: 23%; }
+.relatorio-reference-table.audit th:nth-child(4) { width: 25%; }
+
+.relatorio-file-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--danger);
+  font-size: 12px;
+}
+
+.relatorio-file-icon.csv {
+  color: var(--success);
+}
+
+.relatorio-formato-badge {
+  min-width: 45px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(var(--danger-rgb), 0.42);
+  border-radius: 999px;
+  background: rgba(var(--danger-rgb), 0.10);
+  color: var(--danger-soft-text);
+  font-size: 7.5px;
+  font-weight: 650;
+}
+
+.relatorio-formato-badge.csv {
+  border-color: rgba(var(--success-rgb), 0.42);
+  background: rgba(var(--success-rgb), 0.10);
+  color: var(--success-soft-text);
+}
+
+.relatorio-download-button {
+  min-width: 76px;
+  height: 26px;
+  border: 1px solid rgba(var(--accent-rgb), 0.62);
+  border-radius: 6px;
+  background: rgba(var(--accent-rgb), 0.09);
+  color: var(--accent);
+  font-size: 7.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.relatorio-row-more {
+  color: var(--text-muted);
+}
+
+.relatorio-user-avatar {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 8.5px;
+  font-weight: 700;
+  background: #3877ef;
+}
+
+.relatorio-user-avatar.avatar-1 { background: #466ef0; }
+.relatorio-user-avatar.avatar-2 { background: #a28a64; }
+.relatorio-user-avatar.avatar-3 { background: #19b995; }
+.relatorio-user-avatar.avatar-4 { background: #7950e9; }
+
+/* ============================================================
+   RELATÓRIOS - TEMA AZUL COMO REFERÊNCIA
+============================================================ */
+html[data-theme="blue"] .relatorios-reference-page {
+  height: calc(100vh - 65px) !important;
+  padding: 17px 27px 19px !important;
+  grid-template-rows: 68px minmax(290px, 0.80fr) minmax(338px, 1.20fr);
+  gap: 14px;
+  overflow: hidden !important;
+}
+
+html[data-theme="blue"] .relatorios-page-header h2 {
+  margin-bottom: 4px;
+  color: #f8fbff;
+  font-size: 28px !important;
+  font-weight: 760 !important;
+  letter-spacing: -0.65px;
+}
+
+html[data-theme="blue"] .relatorios-page-header p {
+  color: #9fb6cf;
+  font-size: 11.5px !important;
+}
+
+html[data-theme="blue"] .relatorios-actions {
+  gap: 11px;
+}
+
+html[data-theme="blue"] .relatorios-periodo {
+  width: 355px;
+  height: 42px;
+  border-color: rgba(37, 81, 115, 0.88);
+  border-radius: 8px;
+  background: #081a2d;
+  color: #dce8f6;
+  font-size: 9.5px;
+}
+
+html[data-theme="blue"] .relatorios-button.primary {
+  height: 42px;
+  padding: 0 17px;
+  border-color: rgba(0, 201, 254, 0.72);
+  background: rgba(0, 201, 254, 0.055);
+  color: #00c9fe;
+  font-size: 9.5px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+html[data-theme="blue"] .relatorio-reference-card,
+html[data-theme="blue"] .relatorio-reference-table-card {
+  border-color: rgba(37, 81, 115, 0.76);
+  background: linear-gradient(145deg, #0a1f36, #08192d);
+  box-shadow:
+    0 18px 36px rgba(0, 5, 18, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+html[data-theme="blue"] .relatorio-reference-icon {
+  border-color: rgba(0, 201, 254, 0.30);
+  background: linear-gradient(145deg, rgba(34, 98, 255, 0.22), rgba(0, 201, 254, 0.10));
+  color: #00c9fe;
+}
+
+html[data-theme="blue"] .relatorio-reference-title h3 {
+  color: #f8fbff;
+}
+
+html[data-theme="blue"] .relatorio-reference-title p {
+  color: #91aac4;
+}
+
+html[data-theme="blue"] .relatorio-reference-metric > strong {
+  color: #f8fbff;
+  font-size: 27px;
+}
+
+html[data-theme="blue"] .relatorio-reference-metric b {
+  color: #28e0a8;
+}
+
+html[data-theme="blue"] .relatorio-reference-table thead {
+  background: #0c2944;
+}
+
+html[data-theme="blue"] .relatorio-reference-table th {
+  color: #c9d9e9;
+  border-bottom-color: rgba(37, 81, 115, 0.50);
+}
+
+html[data-theme="blue"] .relatorio-reference-table td {
+  color: #dce8f5;
+  border-bottom-color: rgba(37, 81, 115, 0.32);
+}
+
+html[data-theme="blue"] .relatorio-link-button {
+  border-color: rgba(37, 81, 115, 0.82);
+  background: #0a2037;
+  color: #d9e7f6;
+}
+
+@media (max-width: 1450px) and (min-width: 1181px) {
+  html[data-theme="blue"] .relatorios-reference-page {
+    padding: 14px 18px !important;
+    grid-template-rows: 62px minmax(265px, 0.82fr) minmax(310px, 1.18fr);
+    gap: 11px;
+  }
+
+  html[data-theme="blue"] .relatorios-periodo {
+    width: 280px;
+  }
+
+  .relatorio-reference-title h3 {
+    font-size: 12.5px;
+  }
+
+  .relatorio-reference-title p {
+    font-size: 7.8px;
+  }
+}

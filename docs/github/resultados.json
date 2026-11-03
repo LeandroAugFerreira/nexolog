@@ -1,0 +1,15 @@
+{
+  "project": "nexolog",
+  "backend_exit": 0,
+  "frontend": [
+    {
+      "script": "build",
+      "exit_code": 0,
+      "seconds": 8.76
+    }
+  ],
+  "application_logic_modified": false,
+  "original_files_modified": false,
+  "unittest_passed": 22,
+  "tests_label": "22 aprovados"
+}

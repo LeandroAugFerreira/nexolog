@@ -1,0 +1,32 @@
+[
+  {"title":"NexoLog • Sua operação conectada","image":"dashboard", "cues":[
+    {"pt":"Conheça o NexoLog, um sistema de gestão que conecta estoque, pedidos e entregas.","en":"Meet NexoLog, a management system connecting inventory, orders and deliveries."},
+    {"pt":"A operação e seus indicadores ficam reunidos em uma interface organizada.","en":"Operations and their metrics come together in an organized interface."}]},
+  {"title":"Dashboard • Visão da operação","image":"dashboard", "cues":[
+    {"pt":"O dashboard apresenta pedidos, valores, estoque baixo e remessas pendentes.","en":"The dashboard shows orders, order value, low stock and pending shipments."},
+    {"pt":"O gráfico de movimentações, os pedidos recentes e os alertas ajudam a acompanhar a rotina.","en":"Stock movements, recent orders and alerts help you monitor daily operations."}]},
+  {"title":"Estoque • Produtos e variantes","image":"estoque", "cues":[
+    {"pt":"Cada produto possui categoria, marca, especificação ou variante e código de barras.","en":"Each product has a category, brand, specification or variant, and barcode."},
+    {"pt":"Saldos, reservas e movimentações mantêm o controle de entradas e saídas.","en":"Stock balances, reservations and movements keep incoming and outgoing goods under control."}]},
+  {"title":"Pedidos • Fluxo e filtro de período","image":"pedidos", "cues":[
+    {"pt":"O Kanban organiza os pedidos entre pendente, em processamento, enviado e entregue.","en":"The Kanban board organizes orders into pending, processing, shipped and delivered."},
+    {"pt":"Escolha as datas inicial e final para consultar um período sem perder o histórico.","en":"Choose start and end dates to view a specific period while preserving the full history."}]},
+  {"title":"Entregas • Rastreamento demonstrativo","image":"pedidos", "cues":[
+    {"pt":"O rastreamento simula a viagem em um mapa esquemático, com etapas automáticas.","en":"Tracking simulates the journey on a schematic map, with automatic delivery stages."},
+    {"pt":"Os eventos ficam salvos e alimentam os relatórios e a auditoria. A demonstração não usa GPS real.","en":"Events are saved and feed reports and the audit log. This demonstration does not use live GPS."}]},
+  {"title":"Fornecedores • Parceiros da operação","image":"fornecedores", "cues":[
+    {"pt":"Os fornecedores ficam organizados por categoria, contato, cidade e status.","en":"Suppliers are organized by category, contact, city and status."},
+    {"pt":"Filtros e um painel de detalhes facilitam a consulta e a manutenção dos cadastros.","en":"Filters and a detail panel make it easier to find and maintain supplier records."}]},
+  {"title":"Clientes • Cadastro e relacionamento","image":"clientes", "cues":[
+    {"pt":"A área de clientes reúne cadastros, contatos e indicadores em uma mesma tela.","en":"The customer area brings records, contact details and metrics together on one screen."},
+    {"pt":"A lista possui filtros e rolagem interna para manter os dados acessíveis.","en":"The list includes filters and internal scrolling to keep information accessible."}]},
+  {"title":"Relatórios • Indicadores e auditoria","image":"relatorios", "cues":[
+    {"pt":"Os relatórios mostram giro de estoque, tempo de atendimento e valores por categoria.","en":"Reports show inventory turnover, fulfillment time and order value by category."},
+    {"pt":"Selecione o período, exporte os dados e consulte a trilha das ações realizadas.","en":"Select a period, export data and review the history of actions performed in the system."}]},
+  {"title":"Usuários • Acesso e permissões","image":"usuarios", "cues":[
+    {"pt":"A gestão de usuários controla perfis, permissões e atividades registradas.","en":"User management controls roles, permissions and recorded activities."},
+    {"pt":"O projeto reúne React, FastAPI e SQLite para integrar interface, regras e persistência.","en":"The project combines React, FastAPI and SQLite to integrate the interface, rules and persistence."}]},
+  {"title":"Experimente • Versão Windows","image":"login", "cues":[
+    {"pt":"A versão Windows inclui uma base fictícia com transações entre 2024 e 2026.","en":"The Windows version includes fictional transactions spanning 2024 to 2026."},
+    {"pt":"Baixe o executável no cartão do projeto e escolha Usar acesso demo. NexoLog: sua operação conectada.","en":"Download the executable from the project card and choose the demo login. NexoLog: your operation, connected."}]}
+]

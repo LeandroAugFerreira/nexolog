@@ -1,0 +1,26 @@
+{
+  "periodo": [
+    "2024-01-01",
+    "2026-10-03"
+  ],
+  "dados_ficticios": true,
+  "contagens": {
+    "produtos": 144,
+    "clientes": 48,
+    "fornecedores": 24,
+    "usuarios": 10,
+    "pedidos": 408,
+    "itens_pedido": 1224,
+    "pedido_eventos": 2741,
+    "movimentacoes": 1398,
+    "auditoria": 3180,
+    "relatorios_gerados": 3,
+    "rastreamentos_simulados": 408
+  },
+  "validacao": {
+    "integridade": "ok",
+    "relacionamentos": "ok",
+    "saldos_conciliados": true,
+    "codigos_barras_unicos": true
+  }
+}

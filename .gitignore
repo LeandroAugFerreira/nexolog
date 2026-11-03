@@ -1,0 +1,27 @@
+# Ambientes, dependências e compilação
+.venv/
+.build-venv/
+__pycache__/
+*.py[cod]
+frontend/node_modules/
+frontend/dist/
+build/
+releases/
+.pytest_cache/
+.idea/
+.vscode/
+# Configuração privada e bancos utilizados pelo usuário
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite*
+!data/nexolog-demo.db
+backup/
+backups/
+*.log
+*.tmp
+*.zip
+Thumbs.db
+.DS_Store

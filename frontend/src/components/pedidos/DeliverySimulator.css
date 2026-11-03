@@ -1,0 +1,26 @@
+.lf-delivery-simulator { margin: 14px 0; }
+.lf-sim-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #a7bfd6; font-size: 11px; }
+.lf-sim-badge { padding: 5px 8px; border: 1px solid #f8b84777; border-radius: 5px; background: #f8b84712; color: #ffd27a; font-size: 10px; font-weight: 700; letter-spacing: .8px; }
+.lf-sim-notice { line-height: 1.5; }
+.lf-sim-map { border: 1px solid #1c4863; border-radius: 10px; overflow: hidden; background: #061625; }
+.lf-sim-map > svg { display: block; width: 100%; height: auto; }
+.lf-sim-destination > svg { width: 16px; height: 16px; flex-shrink: 0; }
+.lf-operational-tracking > header > svg { width: 24px; height: 24px; flex-shrink: 0; }
+.lf-sim-destination { display: flex; gap: 8px; align-items: center; padding: 10px; color: #b8d6e9; font-size: 11px; background: #092539; }
+.lf-sim-progress { height: 5px; border-radius: 4px; overflow: hidden; background: #19394d; margin-top: 12px; }
+.lf-sim-progress span { display: block; height: 100%; background: #00d5fa; transition: width .25s linear; }
+.lf-sim-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 12px 0; }
+.lf-sim-metrics small { display: block; color: #92adc6; font-size: 9px; margin-bottom: 5px; }
+.lf-sim-metrics strong { color: #d7edf8; font-size: 11px; }
+.lf-sim-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; }
+.lf-sim-controls button { border: 1px solid #00c9ee66; background: #00c9ee18; color: #4ee1ff; padding: 9px; border-radius: 6px; cursor: pointer; font-size: 11px; }
+.lf-sim-controls label { display: flex; align-items: center; gap: 5px; color: #91adc4; font-size: 10px; }
+.lf-sim-controls select { border: 1px solid #24475f; color: #d2e4f3; background: #102a3f; padding: 7px; border-radius: 5px; font-size: 10px; }
+.lf-sim-controls select:disabled { opacity: .6; }
+.lf-sim-controls .lf-sim-reset { border-color: #385068; background: transparent; color: #a8bfd2; }
+.lf-delivery-simulator h4 { font-size: 12px; margin: 0 0 12px; color: #d2e4f3; }
+.lf-delivery-simulator h4 small { display: block; margin-top: 5px; font-size: 9px; font-weight: 400; color: #8da7c0; }
+.lf-sim-events span { display: block; margin-top: 5px; color: #9bb7ce; font-size: 10px; }
+.lf-tracking-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: 14px; padding: 4px; border-radius: 7px; background: #061625; }
+.lf-tracking-tabs button { border: 1px solid transparent; background: transparent; color: #91abc2; font-size: 11px; padding: 9px 4px; border-radius: 5px; cursor: pointer; }
+.lf-tracking-tabs button[aria-pressed="true"] { color: #3cdfff; border-color: #00c9ee44; background: #00c9ee16; }

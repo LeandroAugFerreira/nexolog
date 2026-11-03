@@ -1,0 +1,100 @@
+/* ============================================================
+   LOGIFLOW
+   IDENTIDADE VISUAL ÚNICA - TEMA AZUL
+============================================================ */
+
+:root,
+html[data-theme="blue"] {
+  color-scheme: dark;
+  --bg-app: #061221;
+  --sidebar-top: #071b2d;
+  --sidebar-mid: #061628;
+  --sidebar-bottom: #07182a;
+  --surface: #081a2e;
+  --surface-alt: #0b2036;
+  --surface-hover: #0d2a45;
+  --input-bg: #07182a;
+  --surface-rgb: 8, 26, 46;
+  --surface-alt-rgb: 11, 32, 54;
+  --border: #163653;
+  --border-strong: #255173;
+  --border-rgb: 22, 54, 83;
+  --border-strong-rgb: 37, 81, 115;
+  --text-main: #f7fbff;
+  --text: #d9e7f6;
+  --text-muted: #9ab1ca;
+  --text-subtle: #67839f;
+  --text-muted-rgb: 154, 177, 202;
+  --text-subtle-rgb: 103, 131, 159;
+  --accent: #00c9fe;
+  --accent-strong: #00b9f2;
+  --accent-deep: #007fb8;
+  --accent-soft-text: #6ee7ff;
+  --accent-contrast: #02131e;
+  --accent-rgb: 0, 201, 254;
+  --success: #1fdda3;
+  --success-deep: #0fa879;
+  --success-soft-text: #6ee7c2;
+  --success-rgb: 31, 221, 163;
+  --warning: #ffb52e;
+  --warning-rgb: 255, 181, 46;
+  --danger: #ff536b;
+  --danger-deep: #df3d55;
+  --danger-soft-text: #ff9dab;
+  --danger-rgb: 255, 83, 107;
+  --secondary: #7a3ff2;
+  --secondary-soft-text: #b59aff;
+  --secondary-rgb: 122, 63, 242;
+  --chart-entry: #00c9fe;
+  --chart-exit: #7a3ff2;
+  --chart-grid: #183754;
+  --shadow-soft: 0 18px 42px rgba(0, 5, 18, 0.42);
+  --scroll-track: rgba(255, 255, 255, 0.010);
+  --scroll-thumb: rgba(154, 177, 202, 0.18);
+  --scroll-thumb-hover: rgba(154, 177, 202, 0.32);
+}
+
+.sidebar-art img {
+  filter: saturate(0.76) contrast(1.04) brightness(0.74) hue-rotate(4deg);
+}
+
+.sidebar-art-overlay {
+  background: linear-gradient(180deg, rgba(8,26,45,.42) 0%, rgba(8,26,45,.18) 28%, rgba(6,18,33,.54) 72%, rgba(7,22,39,.96) 100%);
+}
+
+.brand-mark-svg {
+  filter: drop-shadow(0 8px 20px rgba(var(--accent-rgb), 0.26));
+}
+
+.dashboard-kpi-card,
+.dashboard-flow-card,
+.dashboard-data-card,
+.estoque-card,
+.pedidos10-pipeline-panel,
+.pedidos10-tracking-panel {
+  box-shadow: 0 10px 28px rgba(0, 8, 20, 0.24);
+}
+
+html, body, #root {
+  background: var(--bg-app);
+  color: var(--text-main);
+}
+
+body, .app, .main-area, .content {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.22);
+  color: var(--text-main);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+*::-webkit-scrollbar { width: 7px; height: 7px; }
+*::-webkit-scrollbar-track { background: var(--scroll-track); }
+*::-webkit-scrollbar-thumb { border-radius: 999px; background: var(--scroll-thumb); }
+*::-webkit-scrollbar-thumb:hover { background: var(--scroll-thumb-hover); }

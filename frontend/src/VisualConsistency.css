@@ -1,0 +1,237 @@
+/* Mesma linguagem visual dos painéis de Dashboard e Fornecedores. */
+html[data-theme="blue"] .app .main-area :is(.clientes-page, .usuarios-page) { display: flex !important; flex-direction: column !important; gap: 16px !important; }
+html[data-theme="blue"] .app .main-area .content :is(.clientes-kpis, .usuarios-kpis) { height: auto !important; flex: 0 0 auto !important; margin: 0 !important; gap: 14px !important; }
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi, .relatorio-reference-card) {
+  --card-accent: #0acfff; --card-rgb: 10, 207, 255;
+  position: relative; min-width: 0; border: 1px solid rgba(var(--card-rgb), .28) !important;
+  border-radius: 12px !important;
+  background: radial-gradient(ellipse at 100% 100%, rgba(var(--card-rgb), .12), transparent 68%), linear-gradient(135deg, #0c2239, #031525) !important;
+  box-shadow: inset 0 1px 0 #80caff0a, 0 8px 28px #00101a55 !important;
+}
+html[data-theme="blue"] .app .main-area .cliente-kpi:nth-child(1) { --card-accent: #3698ff; --card-rgb: 54, 152, 255; }
+html[data-theme="blue"] .app .main-area .cliente-kpi:nth-child(2) { --card-accent: #00e1b2; --card-rgb: 0, 225, 178; }
+html[data-theme="blue"] .app .main-area .cliente-kpi:nth-child(3) { --card-accent: #ffb32c; --card-rgb: 255, 179, 44; }
+html[data-theme="blue"] .app .main-area .cliente-kpi:nth-child(4) { --card-accent: #a56aff; --card-rgb: 165, 106, 255; }
+html[data-theme="blue"] .app .main-area .usuario-kpi:nth-child(2) { --card-accent: #ffb32c; --card-rgb: 255, 179, 44; }
+html[data-theme="blue"] .app .main-area .usuario-kpi:nth-child(3) { --card-accent: #a56aff; --card-rgb: 165, 106, 255; }
+html[data-theme="blue"] .app .main-area .relatorio-reference-card.atendimento { --card-accent: #3698ff; --card-rgb: 54, 152, 255; }
+html[data-theme="blue"] .app .main-area .relatorio-reference-card.receita { --card-accent: #00e1b2; --card-rgb: 0, 225, 178; }
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi) {
+  display: grid !important; grid-template-columns: 52px minmax(0, 1fr) !important;
+  align-items: start !important; height: auto !important; min-height: 150px !important;
+  gap: 16px !important; padding: 18px !important; flex-shrink: 0;
+}
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi) > div:last-child {
+  display: flex !important; flex-direction: column; min-width: 0;
+}
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi) span {
+  color: #d3e3f6 !important; font-size: 13px !important; font-weight: 600 !important; line-height: 1.4 !important; white-space: normal !important;
+}
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi) strong {
+  color: #f5f9ff !important; font-size: 32px !important; line-height: 1.2 !important; margin-top: 5px;
+}
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi) small { color: #a8bfd8 !important; line-height: 1.5; margin-top: 8px; }
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi-icon, .usuario-kpi-icon, .relatorio-reference-card .relatorio-reference-icon) {
+  position: static !important; width: 52px !important; height: 52px !important; margin: 0 !important;
+  display: grid !important; place-items: center; flex-shrink: 0; border-radius: 11px !important;
+  color: var(--card-accent) !important; border: 1px solid rgba(var(--card-rgb), .48) !important;
+  background: linear-gradient(135deg, rgba(var(--card-rgb), .23), rgba(var(--card-rgb), .07)) !important;
+  box-shadow: inset 0 0 18px rgba(var(--card-rgb), .08), 0 0 18px rgba(var(--card-rgb), .15) !important;
+}
+html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi-icon, .usuario-kpi-icon, .relatorio-reference-card .relatorio-reference-icon) svg { width: 28px; height: 28px; filter: drop-shadow(0 0 5px rgba(var(--card-rgb), .5)); }
+html[data-theme="blue"] .app .main-area .content :is(.clientes-table-card, .usuarios-table-card, .cliente-inline-panel, .lf-panel, .relatorio-reference-table-card) {
+  background: linear-gradient(135deg, #0b2036, #041627) !important;
+  border: 1px solid #204666 !important; box-shadow: 0 8px 26px #00101a44, inset 0 1px 0 #75cfff08 !important;
+}
+html[data-theme="blue"] .app .main-area .content :is(.lf-heading-icon, .relatorio-reference-table-card .relatorio-reference-icon) {
+  color: #0acfff !important; background: linear-gradient(135deg, #143d81, #062a43) !important;
+  border: 1px solid #087cb677 !important; box-shadow: 0 0 17px #00caff1f !important;
+}
+html[data-theme="blue"] .app .main-area .content :is(.clientes-table, .usuarios-table, .relatorio-table) thead { background: linear-gradient(90deg, #123350, #0a263e) !important; color: #cce3ff; }
+html[data-theme="blue"] .app .main-area .content :is(.cliente-status.ativo, .usuario-status.ativo) { color: #00e5b0 !important; background: #004b3b66 !important; border: 1px solid #00b78b88 !important; box-shadow: 0 0 8px #00e1ad10; }
+html[data-theme="blue"] .app .main-area .content :is(.cliente-status.inativo, .usuario-status.inativo) { color: #ffbe43 !important; background: #71480044 !important; border: 1px solid #c08b3388 !important; }
+html[data-theme="blue"] .app .main-area .usuario-perfil-badge.administrador { color: #ffc24d !important; background: #82530044 !important; border-color: #d4933b88 !important; }
+html[data-theme="blue"] .app .main-area .usuario-perfil-badge.operador { color: #bd92ff !important; background: #6124b744 !important; border-color: #9150ed88 !important; }
+html[data-theme="blue"] .app .main-area .usuario-perfil-badge.gerente { color: #56c9ff !important; background: #0071b744 !important; border-color: #2b92d988 !important; }
+html[data-theme="blue"] .app .main-area .fornecedores-table td:nth-child(3) { overflow: hidden !important; }
+/* Clientes: a lista rola dentro do cartão, como a lista de fornecedores. */
+html[data-theme="blue"] .app .main-area .content .clientes-table-wrapper {
+  flex: 0 0 auto !important; height: clamp(320px, 48dvh, 520px) !important;
+  min-height: 0 !important; max-height: 520px !important; overflow: auto !important;
+  scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #286389 #081a2d;
+}
+html[data-theme="blue"] .app .main-area .clientes-table thead { position: sticky; top: 0; z-index: 2; }
+html[data-theme="blue"] .app .main-area .clientes-table-wrapper::-webkit-scrollbar { width: 8px; height: 8px; }
+html[data-theme="blue"] .app .main-area .clientes-table-wrapper::-webkit-scrollbar-track { background: #081a2d; }
+html[data-theme="blue"] .app .main-area .clientes-table-wrapper::-webkit-scrollbar-thumb { background: #286389; border: 2px solid #081a2d; border-radius: 6px; }
+html[data-theme="blue"] .app .main-area .fornecedores-table .fornecedor-categoria-badge {
+  display: inline-block; vertical-align: middle; max-width: 100%; overflow: hidden;
+  white-space: nowrap; text-overflow: ellipsis; box-sizing: border-box;
+}
+@media (max-width: 640px) {
+  html[data-theme="blue"] .app .main-area .content :is(.cliente-kpi, .usuario-kpi) { min-height: 140px !important; }
+}
+
+/* Minigráficos usam os cadastros dos seis meses mais recentes da base. */
+html[data-theme="blue"] .app .main-area .content .cliente-kpi { min-height: 120px !important; padding: 16px !important; gap: 12px !important; }
+html[data-theme="blue"] .app .main-area .cliente-kpi-chart { display: block !important; position: absolute; width: 84px; height: 38px; bottom: 14px; right: 14px; color: var(--card-accent); filter: drop-shadow(0 0 4px rgba(var(--card-rgb), .28)); }
+html[data-theme="blue"] .app .main-area .cliente-kpi small { padding-right: 70px; font-size: 9px; }
+html[data-theme="blue"] .app .main-area .cliente-kpi strong { font-size: clamp(24px, 2vw, 32px) !important; }
+@media (min-width: 1101px) and (min-height: 640px) {
+  html[data-theme="blue"] .app .main-area > .content.clientes-page { height: auto !important; max-height: none !important; flex: 1 1 0 !important; min-height: 0 !important; overflow: hidden !important; padding: 16px 20px !important; gap: 12px !important; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-page-header { height: auto !important; min-height: 0 !important; flex: 0 0 auto !important; }
+  html[data-theme="blue"] .app .main-area .clientes-page .lf-workspace { align-items: stretch !important; grid-template-rows: minmax(0, 1fr); flex: 1 1 0 !important; min-height: 0 !important; overflow: hidden; }
+  html[data-theme="blue"] .app .main-area .clientes-page :is(.clientes-table-card, .cliente-inline-panel) { height: 100% !important; min-height: 0 !important; overflow: hidden !important; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table-wrapper { height: auto !important; max-height: none !important; min-height: 0 !important; flex: 1 1 0 !important; }
+  html[data-theme="blue"] .app .main-area .clientes-page :is(.clientes-table-header, .clientes-toolbar, .lf-pagination) { flex-shrink: 0; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table-header { padding: 12px 14px; }
+  html[data-theme="blue"] .app .main-area .clientes-page .lf-pagination { padding: 10px 12px; }
+  html[data-theme="blue"] .app .main-area .clientes-page .cliente-inline-panel .cliente-modal { height: 100% !important; max-height: 100% !important; display: flex; flex-direction: column; }
+  html[data-theme="blue"] .app .main-area .clientes-page .cliente-inline-panel .cliente-modal-header { padding: 12px 14px; flex: 0 0 auto; }
+  html[data-theme="blue"] .app .main-area .clientes-page .cliente-inline-panel .cliente-form { flex: 1 1 0; min-height: 0; overflow-y: auto !important; scrollbar-width: thin; scrollbar-color: #286389 #081a2d; }
+  html[data-theme="blue"] .app .main-area .clientes-page .cliente-inline-panel .cliente-modal-actions { position: sticky; bottom: -16px; z-index: 3; margin: 0 -16px -16px; padding: 12px 16px; border-top: 1px solid #204666; background: #071c30; }
+}
+/* Só os eventos rolam; mapa e resumo ficam visíveis. */
+html[data-theme="blue"] .app .main-area .content .lf-connected-tracking { display: flex !important; flex-direction: column; min-height: 0 !important; overflow: hidden !important; gap: 6px; padding: 12px; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking > :not(.lf-connected-events) { flex-shrink: 0; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking > header { margin-bottom: 2px; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking .lf-connected-map { margin-top: 0; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking .lf-connected-map > svg { height: clamp(105px, 18dvh, 180px); }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking .lf-connected-info { margin: 2px 0; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking > .lf-connected-events { flex: 1 1 0; min-height: 70px; overflow-y: auto; overflow-x: hidden; margin: 0; padding-right: 6px; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #286389 #081a2d; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking :is(.lf-connected-note, .lf-connected-details) { margin: 0; }
+@media (max-width: 1100px), (max-height: 639px) {
+  html[data-theme="blue"] .app .main-area .content .lf-connected-tracking { height: auto !important; max-height: none !important; }
+  html[data-theme="blue"] .app .main-area .lf-connected-tracking > .lf-connected-events { flex: 0 0 auto; max-height: 240px; }
+}
+
+/* Conteúdo fixo compacto deixa espaço para o histórico e a ação principal. */
+html[data-theme="blue"] .app .main-area .content .lf-connected-tracking { gap: 4px; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking .lf-connected-order { padding: 8px 10px; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking .lf-connected-order p { margin: 4px 0; line-height: 1.3; }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking .lf-connected-map > svg { height: clamp(90px, 14dvh, 150px); }
+html[data-theme="blue"] .app .main-area .lf-connected-tracking > .lf-connected-details { padding: 8px; min-height: 34px; }
+@media (min-width: 1101px) and (min-height: 640px) {
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table { min-width: 0 !important; width: 100% !important; table-layout: fixed !important; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table :is(th, td) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 8px 6px !important; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(1) { width: 9%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(2) { width: 18%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(3) { width: 16%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(4) { width: 11%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(5) { width: 16%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(6) { width: 9%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(7) { width: 10%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(8) { width: 8%; }
+  html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(9) { width: 3%; }
+}
+
+html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:last-child { width: 5%; }
+html[data-theme="blue"] .app .main-area .clientes-page .clientes-table th:nth-child(5) { width: 14%; }
+html[data-theme="blue"] .app .main-area .clientes-page .clientes-table td:last-child { overflow: visible; padding: 4px 2px !important; }
+
+html[data-theme="blue"] .app .main-area .clientes-page .clientes-table .lf-row-select { display: block; width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+
+/* Listas limitadas também no mobile; o restante da página pode se empilhar. */
+html[data-theme="blue"] .app .main-area :is(.usuarios-table-wrapper, .relatorio-table-wrapper) {
+  overflow: auto !important; max-height: clamp(240px, 42dvh, 480px) !important;
+  scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #286389 #081a2d;
+}
+html[data-theme="blue"] .app .main-area :is(.usuarios-table-wrapper, .relatorio-table-wrapper, .lf-sidebar, .dashboard-orders-table-wrap, .dashboard-alert-list, .relatorio-receita-legenda):focus-visible {
+  outline: 2px solid #00c8f5; outline-offset: -2px;
+}
+html[data-theme="blue"] .app .main-area .usuarios-table thead { position: sticky; top: 0; z-index: 2; background: #0c2941; }
+
+/* Indicadores com a mesma hierarquia: título, valor e área do gráfico. */
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card > header {
+  align-items: flex-start; gap: 8px; padding: 12px 14px;
+}
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-title { min-width: 0; gap: 10px; align-items: flex-start; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-title > div { min-width: 0; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card .relatorio-reference-icon { width: 38px !important; height: 42px !important; flex: 0 0 38px; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card h3 { font-size: 14px !important; line-height: 1.35 !important; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card header p { font-size: 10px !important; line-height: 1.4 !important; margin-top: 4px; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-metric {
+  flex: 0 0 auto; min-height: 62px !important; padding: 0 14px 8px; gap: 4px;
+  flex-direction: column; align-items: flex-start; justify-content: center;
+}
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-metric > strong { font-size: clamp(24px, 2vw, 32px) !important; line-height: 1.15; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-metric > div { flex-direction: row; flex-wrap: wrap; gap: 4px 6px; font-size: 10px; line-height: 1.4; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-receita-layout { grid-template-columns: minmax(90px, .8fr) minmax(0, 1.2fr); gap: 10px; padding: 0 12px 12px; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-donut-wrap { height: 100%; min-height: 110px; max-height: 180px; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-donut-center strong { font-size: 10px !important; max-width: 90px; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-receita-legenda { min-height: 0; max-height: 100%; overflow-y: auto; padding-right: 4px; gap: 8px; scrollbar-width: thin; scrollbar-color: #286389 #081a2d; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-receita-legenda > div { grid-template-columns: 8px minmax(0, 1fr) 28px; gap: 3px 6px; align-items: start; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-receita-legenda :is(span, b, small) { font-size: 10px !important; line-height: 1.35; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-receita-legenda span { white-space: normal; overflow-wrap: anywhere; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-receita-legenda small { grid-column: 2 / 4; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-history-name { min-width: 0; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-history-name :is(strong, small) { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-history-name small { color: var(--text-muted); font-size: 9px; margin-top: 4px; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-table:not(.audit) th:nth-child(1) { width: 39%; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-table:not(.audit) th:nth-child(2) { width: 25%; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-table:not(.audit) th:nth-child(3) { width: 12%; }
+html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-table:not(.audit) th:nth-child(4) { width: 24%; }
+
+/* Desktop: o espaço restante pertence às listas, sem aumentar a página. */
+@media (min-width: 1101px) and (min-height: 640px) {
+  html[data-theme="blue"] .app .main-area > .content:is(.usuarios-page, .relatorios-reference-page, .dashboard-page) {
+    height: auto !important; max-height: none !important; min-height: 0 !important;
+    flex: 1 1 0 !important; overflow: hidden !important; padding: 16px 20px !important; gap: 10px !important;
+  }
+  html[data-theme="blue"] .app .main-area .usuarios-page .usuarios-page-header { min-height: 0 !important; height: auto !important; flex: 0 0 auto; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .usuarios-kpis { width: 100% !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 12px !important; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .usuario-kpi { min-height: 120px !important; padding: 14px !important; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .lf-workspace { flex: 1 1 0 !important; min-height: 0 !important; align-items: stretch !important; grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .usuarios-table-card { height: 100% !important; min-height: 0 !important; overflow: hidden !important; }
+  html[data-theme="blue"] .app .main-area .usuarios-page :is(.usuarios-table-header, .usuarios-toolbar, .lf-pagination) { flex-shrink: 0; padding: 10px 12px; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .usuarios-table-wrapper { flex: 1 1 0 !important; min-height: 0 !important; max-height: none !important; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .lf-sidebar { margin-top: 0 !important; min-height: 0 !important; height: 100%; overflow-y: auto; padding-right: 6px; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #286389 #081a2d; }
+  html[data-theme="blue"] .app .main-area .usuarios-page .lf-sidebar > .lf-panel { flex: 0 0 auto; }
+
+  html[data-theme="blue"] .app .main-area > .content.relatorios-reference-page { display: flex !important; flex-direction: column !important; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorios-page-header { min-height: 0 !important; height: auto !important; flex: 0 0 auto; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorios-reference-charts { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; flex: 0 0 clamp(260px, 39dvh, 360px) !important; min-height: 0; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card { min-height: 0 !important; height: 100%; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card.receita { grid-column: auto !important; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card > header { flex: 0 0 72px; min-height: 72px; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page :is(.relatorio-visual-chart, .relatorio-receita-layout) { min-height: 0 !important; flex: 1 1 0; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-donut-wrap { min-height: 0; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorios-reference-bottom { flex: 1 1 0 !important; min-height: 0 !important; grid-template-rows: minmax(0, 1fr); align-items: stretch !important; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-table-card { min-height: 0 !important; height: 100%; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-table-card > header { flex: 0 0 auto; min-height: 58px; padding: 8px 12px; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-table-wrapper { flex: 1 1 0 !important; min-height: 0 !important; max-height: none !important; }
+
+  html[data-theme="blue"] .app .main-area > .content.dashboard-page { grid-template-rows: auto auto minmax(180px, 1.05fr) minmax(140px, 1fr) !important; align-content: stretch; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 12px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpi-card { min-height: 124px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpi-main { grid-template-columns: 38px minmax(0, 1fr); gap: 10px !important; padding: 12px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpi-icon { width: 38px !important; height: 42px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpi-copy > span { font-size: 12px !important; padding-right: 8px; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpi-copy > strong { font-size: clamp(24px, 2vw, 30px) !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-kpi-variation { padding-right: 44px; margin-top: 4px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-flow-card { height: 100% !important; overflow: hidden; }
+  html[data-theme="blue"] .app .main-area .dashboard-page :is(.dashboard-flow-header, .dashboard-data-header) { min-height: 58px !important; padding: 8px 12px !important; gap: 8px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-section-icon { width: 38px !important; height: 42px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-section-title { flex: 1 1 170px; gap: 10px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-section-title h3 { font-size: 16px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-section-title p { font-size: 10px !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-flow-chart { height: auto !important; min-height: 0 !important; flex: 1 1 0; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-lower-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-template-rows: minmax(0, 1fr); align-items: stretch; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-data-card { height: 100% !important; min-height: 0 !important; display: flex; flex-direction: column; overflow: hidden; }
+  html[data-theme="blue"] .app .main-area .dashboard-page :is(.dashboard-orders-table-wrap, .dashboard-alert-list) { height: auto !important; min-height: 0 !important; flex: 1 1 0; overflow: auto !important; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #286389 #081a2d; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table thead { position: sticky; top: 0; z-index: 2; background: #0c2941; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table { min-width: 0 !important; width: 100%; table-layout: fixed !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table :is(th, td) { padding: 6px 4px !important; overflow: hidden; text-overflow: ellipsis !important; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table th:nth-child(1) { width: 14%; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table th:nth-child(2) { width: 28%; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table th:nth-child(3) { width: 20%; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table th:nth-child(4) { width: 22%; }
+  html[data-theme="blue"] .app .main-area .dashboard-page .dashboard-orders-table th:nth-child(5) { width: 16%; }
+}
+@media (min-width: 1101px) and (max-width: 1250px) and (min-height: 640px) {
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page .relatorio-reference-card > header { flex-basis: 96px; min-height: 96px; }
+}
+@media print {
+  html[data-theme="blue"] .app .main-area > .content.relatorios-reference-page { height: auto !important; overflow: visible !important; display: block !important; }
+  html[data-theme="blue"] .app .main-area .relatorios-reference-page :is(.relatorios-reference-bottom, .relatorio-reference-table-card, .relatorio-table-wrapper, .relatorio-receita-legenda) { height: auto !important; max-height: none !important; overflow: visible !important; }
+}
