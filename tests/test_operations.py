@@ -307,7 +307,7 @@ class OperacaoTests(unittest.TestCase):
 
     def test_perfil_consulta_nao_pode_gravar_relatorio_e_operador_pode(self):
         payload = {"nome": "Relatorio sintético", "arquivo": "operacao.csv",
-            "periodo": "30", "conteudo": "Item;Valor\\nTeste;10\\n"}
+            "periodo": "30", "conteudo": "Item;Valor\nTeste;10\n"}
         login_consulta = self.client.post("/api/auth/login",
             json={"email": "consulta@teste.local", "senha": PASSWORD})
         self.assertEqual(login_consulta.status_code, 200, login_consulta.text)
@@ -333,10 +333,10 @@ class OperacaoTests(unittest.TestCase):
         ambiente = os.environ.copy()
         ambiente.pop("NEXOLOG_ALLOW_DEMO_PASSWORD", None)
         ambiente.pop("LOGIFLOW_ALLOW_DEMO_PASSWORD", None)
-        codigo = ("from unittest.mock import patch\\n"
-            "with patch('dotenv.load_dotenv', return_value=False):\\n"
-            "    from backend.config import ALLOW_DEMO_PASSWORD\\n"
-            "    print(ALLOW_DEMO_PASSWORD)\\n")
+        codigo = ("from unittest.mock import patch\n"
+            "with patch('dotenv.load_dotenv', return_value=False):\n"
+            "    from backend.config import ALLOW_DEMO_PASSWORD\n"
+            "    print(ALLOW_DEMO_PASSWORD)\n")
         execucao = subprocess.run([sys.executable, "-c", codigo],
             cwd=str(Path(__file__).resolve().parents[1]), env=ambiente,
             capture_output=True, text=True, check=True)
