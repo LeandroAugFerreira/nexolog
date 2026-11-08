@@ -100,3 +100,8 @@ Após a criação deste inventário, foi implementada em branch separada a corre
 - **Limite:** nenhuma execução E2E em navegador, teste de segurança ofensivo, homologação de Windows ou deploy público foi realizada nesta etapa.
 
 Veja [CORRECOES_P0.md](CORRECOES_P0.md) para o escopo e os riscos restantes. Os dados históricos das seções anteriores continuam válidos para a auditoria inicial de 08/11/2026, anterior à branch de correção.
+
+
+## 9. Nova validação de navegador com o sistema real
+
+[GitHub Actions #42497341800](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497341800), 08/11/2026: **24/24 testes backend, 14/14 testes JavaScript, build Vite e Playwright Chromium aprovados**. O navegador fez login e criou pedido pela interface; API real processou expedição/entrega; o Dashboard mostrou o pedido. SQLite de teste efêmero. Veja [E2E_BROWSER.md](E2E_BROWSER.md) para os limites exatos. O [tour público](https://leandroaugferreira.github.io/nexolog-demo.html) é simulado, sem backend.

@@ -87,3 +87,8 @@ Pontos que diferenciam a solução:
 Não foi executado o servidor nesta sessão: o ambiente de trabalho não recebeu uma cópia integral do código e não tem acesso direto de rede para clonar. A inspeção usou o conector GitHub; execução de testes de aplicação deve ocorrer no runner isolado do CI ou em ambiente local preparado por outra etapa. A confirmação do CI após a publicação desta branch será registrada separadamente conforme o estado observado.
 
 Use os documentos [ESTUDO_DE_CASO.md](ESTUDO_DE_CASO.md), [ARQUITETURA.md](ARQUITETURA.md), [EVIDENCIAS.md](EVIDENCIAS.md), [ENTREVISTA_TECNICA.md](ENTREVISTA_TECNICA.md), [ROTEIRO_DEMO.md](ROTEIRO_DEMO.md) e [PLANO_DE_MELHORIAS.md](PLANO_DE_MELHORIAS.md) em conjunto.
+
+
+## Atualização após a auditoria estática inicial
+
+Novas correções de autorização e configuração foram aplicadas em branch de revisão. [GitHub Actions #42497341800](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497341800) executou 24 testes backend, 14 testes JS e fluxo real Playwright Chromium com sucesso. Ver [E2E_BROWSER.md](E2E_BROWSER.md). Continua sem implantação web do backend; essa execução não comprova segurança de produção.

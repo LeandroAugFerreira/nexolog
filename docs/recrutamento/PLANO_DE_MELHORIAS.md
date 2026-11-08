@@ -75,3 +75,10 @@ Preparar ambiente efêmero **separado** da máquina de trabalho, com dataset reg
 ## Escopo e branches de revisão
 
 A branch inicial `docs/nexolog-recrutamento-20261108` acrescentou apenas documentos Markdown. A branch posterior `fix/nexolog-controles-p0-20261108` incorpora aquela documentação e propõe correções em `backend/main.py`, `backend/config.py` e testes, com nova documentação de evidências. **A main, os dados, releases, workflows e o site não foram alterados.** Revisar o diff, os testes e o impacto da senha demo em instalações antigas antes de qualquer merge.
+
+
+## Progresso posterior — 08/11/2026
+
+Concluídos em branch de revisão: controles P0, dois testes de permissão/configuração, testes JavaScript no CI e [teste integrado de Chromium Playwright](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497341800) com dados sintéticos. [Simulação web pública](https://leandroaugferreira.github.io/nexolog-demo.html) criada no repositório do portfólio.
+
+Continuam pendentes: backend publicamente hospedado com política de segurança de produção; teste completo de cliques no Kanban; rate limiting, TLS/CSP, segurança de sessão, métricas de carga, modularização extensa e demais itens P2/P3. Essas atividades requerem projeto separado e validação antes de eventual deploy; não podem ser chamadas de prontas.
