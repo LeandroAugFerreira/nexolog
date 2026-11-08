@@ -1,6 +1,6 @@
 # Plano de melhorias priorizado — NexoLog para recrutamento
 
-**Data:** 08/11/2026. **Status atualizado:** duas correções P0 implementadas em branch de revisão (ainda sem merge). Demais itens permanecem propostos. Sem deploy nem publicação no site principal. Ver [CORRECOES_P0.md](CORRECOES_P0.md) e [CI](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42490711781).
+**Data:** 08/11/2026. **Status atualizado:** correções P0, documentação e teste E2E integrados à main pelo [Pull Request #1](https://github.com/LeandroAugFerreira/nexolog/pull/1). Demais itens de produção permanecem propostos. Não houve deploy público de backend. Ver [CORRECOES_P0.md](CORRECOES_P0.md) e [CI](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42490711781).
 
 ## Critérios de prioridade
 
@@ -74,11 +74,11 @@ Preparar ambiente efêmero **separado** da máquina de trabalho, com dataset reg
 
 ## Escopo e branches de revisão
 
-A branch inicial `docs/nexolog-recrutamento-20261108` acrescentou apenas documentos Markdown. A branch posterior `fix/nexolog-controles-p0-20261108` incorpora aquela documentação e propõe correções em `backend/main.py`, `backend/config.py` e testes, com nova documentação de evidências. **A main, os dados, releases, workflows e o site não foram alterados.** Revisar o diff, os testes e o impacto da senha demo em instalações antigas antes de qualquer merge.
+A branch inicial `docs/nexolog-recrutamento-20261108` acrescentou apenas documentos Markdown. A branch posterior `fix/nexolog-controles-p0-20261108` incorpora aquela documentação e propõe correções em `backend/main.py`, `backend/config.py` e testes, com nova documentação de evidências. **Histórico:** a branch de correção foi integrada à main pelo PR #1. Os dados e os releases não foram alterados; o workflow de testes foi ampliado. O site do portfólio foi atualizado em commit separado para disponibilizar somente a simulação estática. Configurações de instalações antigas devem ser verificadas antes de qualquer deploy.
 
 
 ## Progresso posterior — 08/11/2026
 
-Concluídos em branch de revisão: controles P0, dois testes de permissão/configuração, testes JavaScript no CI e [teste integrado de Chromium Playwright](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497737703) com dados sintéticos. [Simulação web pública](https://leandroaugferreira.github.io/nexolog-demo.html) criada no repositório do portfólio.
+Integrados à main: controles P0, dois testes de permissão/configuração, testes JavaScript no CI e [teste integrado de Chromium Playwright](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497737703) com dados sintéticos. [Simulação web pública](https://leandroaugferreira.github.io/nexolog-demo.html) criada no repositório do portfólio.
 
 Continuam pendentes: backend publicamente hospedado com política de segurança de produção; cobertura de todos os controles do Kanban; rate limiting, TLS/CSP, segurança de sessão, métricas de carga, modularização extensa e demais itens P2/P3. Essas atividades requerem projeto separado e validação antes de eventual deploy; não podem ser chamadas de prontas.

@@ -1,6 +1,6 @@
 # Correções P0 propostas — controles de acesso e modo de demonstração
 
-**Branch:** `fix/nexolog-controles-p0-20261108` · **Origem:** `docs/nexolog-recrutamento-20261108` · **Status:** implementação para revisão, sem merge e sem deploy.
+**Branch:** `fix/nexolog-controles-p0-20261108` · **Origem:** `docs/nexolog-recrutamento-20261108` · **Status:** integrado à main pelo [Pull Request #1](https://github.com/LeandroAugFerreira/nexolog/pull/1), sem deploy público de backend.
 
 ## Escopo das alterações
 
@@ -21,15 +21,15 @@
 - Variáveis/arquivos .env podem explicitamente habilitar a senha: a nova configuração não garante segurança de um ambiente mal configurado.
 - Contas administrativas demonstrativas e endpoints de demonstração **não são apropriados para acesso público**. É necessária uma arquitetura de demo isolada, sem privilégios e com política de rede, sessões e credenciais apropriada.
 - Não foi implantada proteção nova contra brute force, XSS, vazamento de token em localStorage ou cabeçalhos HTTP de produção.
-- Os testes existentes não são um teste de navegador E2E; isso permanece como prioridade P1.
+- Há agora um teste E2E com navegador Chromium e API real, descrito em [E2E_BROWSER.md](E2E_BROWSER.md). Não representa cobertura integral da UI.
 - A matriz de permissões das demais rotas não foi refatorada.
 
-## Revisão sugerida antes de merge
+## Cuidados para instalações futuras
 
 1. Inspecionar o diff e verificar se o perfil Operador deve continuar podendo exportar relatórios (comportamento preservado).
 2. Confirmar que nenhum ambiente fora da demonstração depende de senhas públicas.
-3. Conferir execução dos testes da branch e o build.
+3. Conferir os resultados atuais do CI e repetir testes após qualquer alteração.
 4. Validar manualmente, em base descartável, o fluxo Consulta → 403 e Operador → 201.
-5. Somente após aprovação, abrir/realizar merge. **Nenhum site, deploy ou versão do instalador foi atualizado nesta branch.**
+5. O merge foi realizado no PR #1. **Nenhum backend público nem nova versão do instalador foi implantado.** A simulação web foi criada separadamente no portfólio.
 
 Referências: [Auditoria inicial](AUDITORIA.md) · [Plano de melhorias](PLANO_DE_MELHORIAS.md) · [Teste de operações](../../tests/test_operations.py).
