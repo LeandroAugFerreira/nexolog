@@ -1,6 +1,6 @@
 # Plano de melhorias priorizado — NexoLog para recrutamento
 
-**Data:** 08/11/2026. **Status:** propostas para revisão; não executadas. Sem alteração de lógica, deploy ou publicação no site principal.
+**Data:** 08/11/2026. **Status atualizado:** duas correções P0 implementadas em branch de revisão (ainda sem merge). Demais itens permanecem propostos. Sem deploy nem publicação no site principal. Ver [CORRECOES_P0.md](CORRECOES_P0.md) e [CI](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42490711781).
 
 ## Critérios de prioridade
 
@@ -72,6 +72,6 @@ Preparar ambiente efêmero **separado** da máquina de trabalho, com dataset reg
 - **UX:** porcentagem de passos de demo que o avaliador conclui sem ajuda, a partir de teste com participantes consentidos.
 - **Negócio:** apenas resultados com dados/usuários reais e autorização específica; manter bases de teste e métricas sintéticas claramente rotuladas.
 
-## Escopo deste pull request/branch
+## Escopo e branches de revisão
 
-A documentação proposta acrescenta apenas arquivos Markdown sob docs/recrutamento/. **Zero alterações em arquivos de aplicação, testes, workflows, dados, releases ou site do portfólio.** Revisar o diff, links e evidências antes do merge.
+A branch inicial `docs/nexolog-recrutamento-20261108` acrescentou apenas documentos Markdown. A branch posterior `fix/nexolog-controles-p0-20261108` incorpora aquela documentação e propõe correções em `backend/main.py`, `backend/config.py` e testes, com nova documentação de evidências. **A main, os dados, releases, workflows e o site não foram alterados.** Revisar o diff, os testes e o impacto da senha demo em instalações antigas antes de qualquer merge.

@@ -87,3 +87,16 @@ O arquivo tests/test_operations.py define banco em TemporaryDirectory antes de i
 - Link de execução do GitHub Actions, sem inserir segredos ou dados reais no relatório.
 
 **Regra para currículo e entrevistas:** nunca chamar resultado de teste histórico de “teste executado agora”, nem confundir demonstração local com cliente em produção.
+
+
+## 8. Atualização posterior — branch de controles P0 (08/11/2026)
+
+Após a criação deste inventário, foi implementada em branch separada a correção de autorização de escrita de relatórios e o fallback seguro da configuração de senha demo.
+
+- **Branch:** `fix/nexolog-controles-p0-20261108`.
+- **Commit validado:** `beb31166d05aab1b6f6ec0872661b7b6e022c58a`.
+- **[Execução remota real](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42490711781):** conclusão `success` — **24 testes backend aprovados** (`Ran 24 tests ... OK`) e **build frontend aprovado**.
+- **Novos testes:** Consulta não pode gravar relatório, Operador pode exportar, e `ALLOW_DEMO_PASSWORD` permanece falso quando não há variável ou arquivo de configuração.
+- **Limite:** nenhuma execução E2E em navegador, teste de segurança ofensivo, homologação de Windows ou deploy público foi realizada nesta etapa.
+
+Veja [CORRECOES_P0.md](CORRECOES_P0.md) para o escopo e os riscos restantes. Os dados históricos das seções anteriores continuam válidos para a auditoria inicial de 08/11/2026, anterior à branch de correção.

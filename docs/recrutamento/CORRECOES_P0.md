@@ -13,7 +13,7 @@
 
 - Teste `test_perfil_consulta_nao_pode_gravar_relatorio_e_operador_pode`: espera 200 para leitura, 403 para escrita Consulta, nenhuma gravação, 201 para escrita Operador e consulta posterior do documento.
 - Teste `test_senha_demo_desativada_por_padrao_sem_variavel_configurada`: importa `backend.config` em processo separado, com variáveis `NEXOLOG_ALLOW_DEMO_PASSWORD` e `LOGIFLOW_ALLOW_DEMO_PASSWORD` ausentes, sem carregar .env; espera `False`.
-- Suíte backend e build frontend continuam sendo executados no CI já existente. **O resultado do novo commit deve ser verificado nos logs**; não antecipar aprovação.
+- **Validação efetiva do commit `beb31166d05aab1b6f6ec0872661b7b6e022c58a`:** [GitHub Actions #42490711781](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42490711781), em 08/11/2026, com **24/24 testes de backend aprovados** e **build frontend aprovado**. Confirma os dois testes novos e os 22 anteriores; não substitui homologação em navegador ou testes de segurança.
 
 ## Riscos e restrições remanescentes
 
