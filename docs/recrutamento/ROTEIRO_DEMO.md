@@ -81,4 +81,4 @@ Anotar commit, sistema operacional, build, conta demo não sensível, quantidade
 
 ## Alternativa para recrutadores sem instalação
 
-Abrir [o tour interativo](https://leandroaugferreira.github.io/nexolog-demo.html) e demonstrar quatro etapas fictícias (criar, processar, expedir, entregar). Dizer explicitamente que é **uma simulação sem backend**. Em seguida, compartilhar [a execução real de testes](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497341800) e o código backend/operations.py para comprovar o fluxo técnico; não confundir tour com serviço em produção.
+Abrir [o tour interativo](https://leandroaugferreira.github.io/nexolog-demo.html) e demonstrar quatro etapas fictícias (criar, processar, expedir, entregar). Dizer explicitamente que é **uma simulação sem backend**. Em seguida, compartilhar [a execução real de testes](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497737703) e o código backend/operations.py para comprovar o fluxo técnico; não confundir tour com serviço em produção.

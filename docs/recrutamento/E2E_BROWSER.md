@@ -1,16 +1,16 @@
 # Teste com navegador real — NexoLog
 
 Data da validação: 08/11/2026.
-Execução: [GitHub Actions #42497341800](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497341800).
-Commit validado: 42cbd7f9c68fdae5bca7ff9678d1551c3bfb3ed3.
+Execução: [GitHub Actions #42497737703](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497737703).
+Commit validado: a81d690a715d67dc4071e8b7ab86aa270c3328c8.
 
 ## Resultados efetivamente observados
 
 - Backend: **24 testes unittest aprovados**.
 - Frontend: **14 testes JavaScript aprovados**, build Vite/React aprovado.
-- Browser E2E: **aprovado no Chromium**; login e criação de pedido feitos pela interface React, verificação de saldos e mudança de status pela API FastAPI real, visualização final do pedido no Dashboard real.
+- Browser E2E: **aprovado no Chromium**; login e criação de pedido feitos pela interface React, verificação de saldos via API FastAPI real, mudança de status por cliques nas ações do Kanban e visualização final do pedido no Dashboard real.
 
-**Precisão importante:** as transições processando → enviado → entregue foram acionadas por requisições HTTP diretas no teste, NÃO por clique no quadro Kanban. Assim, esta é uma validação integrada de navegador + API, mas não um teste exaustivo de todos os controles da interface.
+**Precisão importante:** nesta versão, o navegador clicou nos menus de ações de pedido do Kanban e escolheu os estados processando → enviado → entregue. As verificações de saldo, status persistido e movimentação foram feitas por requisições à API real. Trata-se de um E2E de um fluxo crítico, não da cobertura de todas as telas ou operações.
 
 ## Cenário sintético verificado
 
@@ -55,4 +55,4 @@ A página pública é uma **simulação estática** e não executa a API real ou
 
 ## Não coberto
 
-Implantação de API segura na internet, testes de carga, auditoria de segurança de dependências, pentest, integração real com transportadora, navegação completa do Kanban no teste E2E e execução recente do instalador Windows.
+Implantação de API segura na internet, testes de carga, auditoria de segurança de dependências, pentest, integração real com transportadora, todos os filtros, operações de lote e demais fluxos do Kanban e execução recente do instalador Windows.

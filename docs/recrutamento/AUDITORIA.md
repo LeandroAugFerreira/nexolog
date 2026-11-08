@@ -91,4 +91,4 @@ Use os documentos [ESTUDO_DE_CASO.md](ESTUDO_DE_CASO.md), [ARQUITETURA.md](ARQUI
 
 ## Atualização após a auditoria estática inicial
 
-Novas correções de autorização e configuração foram aplicadas em branch de revisão. [GitHub Actions #42497341800](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497341800) executou 24 testes backend, 14 testes JS e fluxo real Playwright Chromium com sucesso. Ver [E2E_BROWSER.md](E2E_BROWSER.md). Continua sem implantação web do backend; essa execução não comprova segurança de produção.
+Novas correções de autorização e configuração foram aplicadas em branch de revisão. [GitHub Actions #42497737703](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497737703) executou 24 testes backend, 14 testes JS e fluxo real Playwright Chromium, incluindo cliques no Kanban e verificação da API, com sucesso. Ver [E2E_BROWSER.md](E2E_BROWSER.md). Continua sem implantação web do backend; essa execução não comprova segurança de produção.
