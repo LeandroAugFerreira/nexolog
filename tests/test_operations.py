@@ -305,6 +305,43 @@ class OperacaoTests(unittest.TestCase):
         self.assertEqual(self.client.post("/api/auth/logout", headers=self.headers).status_code, 204)
         self.assertEqual(self.client.get("/api/produtos", headers=self.headers).status_code, 401)
 
+    def test_perfil_consulta_nao_pode_gravar_relatorio_e_operador_pode(self):
+        payload = {"nome": "Relatorio sintético", "arquivo": "operacao.csv",
+            "periodo": "30", "conteudo": "Item;Valor\nTeste;10\n"}
+        login_consulta = self.client.post("/api/auth/login",
+            json={"email": "consulta@teste.local", "senha": PASSWORD})
+        self.assertEqual(login_consulta.status_code, 200, login_consulta.text)
+        consulta = {"Authorization": "Bearer " + login_consulta.json()["token"]}
+        self.assertEqual(self.client.get("/api/relatorios", headers=consulta).status_code, 200)
+        negada = self.client.post("/api/relatorios", headers=consulta, json=payload)
+        self.assertEqual(negada.status_code, 403, negada.text)
+        self.assertIn("somente para visualização", negada.json()["detail"])
+        with SessionLocal() as db:
+            self.assertEqual(db.query(RelatorioGerado).count(), 0)
+        login_operador = self.client.post("/api/auth/login",
+            json={"email": "operador@teste.local", "senha": PASSWORD})
+        self.assertEqual(login_operador.status_code, 200, login_operador.text)
+        operador = {"Authorization": "Bearer " + login_operador.json()["token"]}
+        criada = self.client.post("/api/relatorios", headers=operador, json=payload)
+        self.assertEqual(criada.status_code, 201, criada.text)
+        lida = self.client.get("/api/relatorios", headers=consulta)
+        self.assertEqual(lida.status_code, 200, lida.text)
+        self.assertEqual(len(lida.json()), 1)
+
+    def test_senha_demo_desativada_por_padrao_sem_variavel_configurada(self):
+        # Subprocesso evita recarregar constantes usadas pelos demais testes.
+        ambiente = os.environ.copy()
+        ambiente.pop("NEXOLOG_ALLOW_DEMO_PASSWORD", None)
+        ambiente.pop("LOGIFLOW_ALLOW_DEMO_PASSWORD", None)
+        codigo = ("from unittest.mock import patch\n"
+            "with patch('dotenv.load_dotenv', return_value=False):\n"
+            "    from backend.config import ALLOW_DEMO_PASSWORD\n"
+            "    print(ALLOW_DEMO_PASSWORD)\n")
+        execucao = subprocess.run([sys.executable, "-c", codigo],
+            cwd=str(Path(__file__).resolve().parents[1]), env=ambiente,
+            capture_output=True, text=True, check=True)
+        self.assertEqual(execucao.stdout.strip(), "False")
+
     def test_relatorio_persistido_protegido_e_csv_seguro(self):
         r = self.client.post("/api/relatorios", headers=self.headers, json={"nome": "Resumo", "arquivo": "resumo.csv", "periodo": "30",
             "conteudo": 'Cliente;Valor\n"=HYPERLINK(1)";100\n'})

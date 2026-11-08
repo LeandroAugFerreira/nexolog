@@ -25,3 +25,5 @@ backups/
 *.zip
 Thumbs.db
 .DS_Store
+# Capturas de testes locais (dados fictícios)
+artifacts/e2e/

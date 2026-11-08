@@ -116,3 +116,11 @@ A escolha de licença depende da aprovação do autor; nenhuma licença nova foi
 [NexoLog no portfólio](https://leandroaugferreira.github.io/nexolog.html) · [Portfólio completo](https://leandroaugferreira.github.io/).
 
 Repositório: [LeandroAugFerreira/nexolog](https://github.com/LeandroAugFerreira/nexolog).
+
+## 16. Demonstração web e teste com navegador
+
+- [Explorar NexoLog no navegador](https://leandroaugferreira.github.io/nexolog-demo.html): demonstração **estática e simulada**, sem conta, banco ou API online.
+- [GitHub Actions: fluxo integrado real](https://github.com/LeandroAugFerreira/nexolog/actions/runs/42497737703): login e cadastro de pedido via interface, ações de processamento, expedição e entrega clicadas no Kanban React, com verificação de estoque pela API real e confirmação visual no Dashboard.
+- [Detalhes, evidências e limites](docs/recrutamento/E2E_BROWSER.md).
+
+A execução verificada em 08/11/2026 aprovou 24 testes backend, 14 testes JavaScript, build frontend e fluxo browser no Chromium. O site público simula as regras, sem operar o sistema real.
