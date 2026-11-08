@@ -125,12 +125,15 @@ def smoke() -> None:
                             raise AssertionError(f"GET {path}: HTTP {resp.status}")
                         return resp.json()
 
-                    def patch(codigo: str, status: str) -> dict:
-                        resp = context.request.patch(API + "/api/pedidos/" + codigo + "/status",
-                            headers=headers, data={"status": status})
-                        if not resp.ok:
-                            raise AssertionError(f"PATCH pedido ({status}): HTTP {resp.status}; {resp.text()[:120]}")
-                        return resp.json()
+                    def advance_in_browser(codigo: str, label: str, expected_status: str) -> None:
+                        page.get_by_role("button", name=f"Ações do pedido {codigo}").click()
+                        page.get_by_role("button", name=f"Mover para {label}").click()
+                        for _ in range(45):
+                            pedido_atual = get("/api/pedidos/" + codigo)
+                            if pedido_atual["status"] == expected_status:
+                                return
+                            time.sleep(0.2)
+                        raise AssertionError(f"Alteração do status {expected_status} não persistiu após clique na interface.")
 
                     pedidos = get("/api/pedidos")
                     if len(pedidos) != 1:
@@ -141,12 +144,12 @@ def smoke() -> None:
                     for campo, valor in (("estoque_atual", 100), ("estoque_reservado", 30), ("estoque_disponivel", 70)):
                         require_value(saldos, campo, valor)
 
-                    require_value(patch(codigo, "processando"), "status", "processando")
-                    require_value(patch(codigo, "enviado"), "status", "enviado")
+                    advance_in_browser(codigo, "Em Processamento", "processando")
+                    advance_in_browser(codigo, "Enviado", "enviado")
                     saldos = get("/api/produtos/PRD-900")
                     for campo, valor in (("estoque_atual", 70), ("estoque_reservado", 0), ("estoque_disponivel", 70)):
                         require_value(saldos, campo, valor)
-                    require_value(patch(codigo, "entregue"), "status", "entregue")
+                    advance_in_browser(codigo, "Entregue", "entregue")
                     resultado = get("/api/pedidos/" + codigo)
                     require_value(resultado, "status", "entregue")
                     movimentos = get("/api/movimentacoes")
@@ -160,7 +163,7 @@ def smoke() -> None:
                     expect(page.get_by_text("Cliente Sintetico QA").first).to_be_visible()
                     page.screenshot(path=str(ARTIFACTS / "nexolog-browser-e2e.png"), full_page=True)
                     print("PASS: login via interface; criação via formulário; reserva 100/30/70;")
-                    print("PASS: processamento, expedição 70/0/70, entrega e saída única via API real;")
+                    print("PASS: mudanças de status por clique no Kanban, expedição 70/0/70 e saída única;")
                     print("PASS: pedido sintético visível no Dashboard React após recarga.")
                 except Exception:
                     page.screenshot(path=str(ARTIFACTS / "nexolog-browser-e2e-failure.png"), full_page=True)
