@@ -11,7 +11,9 @@ def setting(name, default):
 
 DATABASE_PATH = Path(setting("DATABASE_PATH", str(BASE_DIR / "logiflow.db"))).resolve()
 DEMO_MODE = setting("DEMO_MODE", "false").lower() == "true"
-ALLOW_DEMO_PASSWORD = setting("ALLOW_DEMO_PASSWORD", "true").lower() == "true"
+# Em modo normal, a senha demonstrativa só é liberada por opção explícita.
+# Scripts de demonstração local habilitam DEMO_MODE separadamente.
+ALLOW_DEMO_PASSWORD = setting("ALLOW_DEMO_PASSWORD", "false").lower() == "true"
 PUBLIC_SIGNUP = setting("PUBLIC_SIGNUP", "false").lower() == "true"
 DEMO_PASSWORD = setting("DEMO_PASSWORD", "LogiFlow@2026")
 TRACKING_WORKER = setting("TRACKING_WORKER", "true").lower() == "true"

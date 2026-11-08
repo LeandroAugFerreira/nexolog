@@ -410,7 +410,8 @@ def permissao_endpoint(usuario: Usuario, request: Request) -> tuple[bool, str]:
       operação completa, exceto gestão de usuários.
 
     operador:
-      leitura geral + escrita em produtos, movimentações e pedidos.
+      leitura geral + escrita em produtos, movimentações, pedidos
+      e geração de relatórios CSV.
 
     consulta:
       somente leitura.
@@ -419,8 +420,6 @@ def permissao_endpoint(usuario: Usuario, request: Request) -> tuple[bool, str]:
     caminho = request.url.path
     perfil = usuario.perfil
     if caminho.startswith('/api/auth/'):
-        return (True, '')
-    if caminho == '/api/relatorios' and metodo == 'POST':
         return (True, '')
     if perfil == 'administrador':
         return (True, '')
@@ -433,6 +432,9 @@ def permissao_endpoint(usuario: Usuario, request: Request) -> tuple[bool, str]:
     if perfil == 'gerente':
         return (True, '')
     if perfil == 'operador':
+        # A exportação é uma escrita operacional, mas o perfil Consulta não pode gravar.
+        if caminho == '/api/relatorios' and metodo == 'POST':
+            return (True, '')
         rotas_operador = ('/api/produtos', '/api/movimentacoes', '/api/pedidos')
         if caminho.startswith(rotas_operador):
             return (True, '')
@@ -2787,13 +2789,14 @@ def buscar_pedido(
 # 4. calcula cada subtotal
 # 5. calcula o valor total
 # 6. grava pedido + itens em uma única transação
-# 7. reduz o Estoque Atual dos produtos
-# 8. registra uma movimentação automática de Saída
+# 7. reserva unidades sem alterar o saldo físico
+# 8. na mudança para "enviado", registra a saída física e a movimentação
 #
 # O local padrão da mercadoria é "Estoque Principal".
 #
-# Pedido, itens, saldos e movimentações são persistidos na
-# mesma transação. Em caso de erro, o banco executa rollback.
+# Na criação, pedido/itens e eventos de reserva são confirmados na mesma
+# transação. A saída física e a movimentação são persistidas na expedição.
+# Em caso de erro de escrita, a transação pode ser revertida (rollback).
 #
 # ============================================================
 
